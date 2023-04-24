@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.ShopPage"
+             BackgroundColor="White">
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+            <Image Source="shopimg1.png" Scale="0.9" Aspect="AspectFill"/>
+
+            <Label Text="CLOTHING" CharacterSpacing="2.4" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+            </Grid>
+
+            <Grid>
+                <Image Source="shopimg2.png" Scale="0.9" Aspect="AspectFill"/>
+
+                <Label Text="SHOES" CharacterSpacing="2.4" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+            </Grid>
+
+            <Grid >
+                <Image Source="shopimg3.png" Scale="0.9" Aspect="AspectFill"/>
+
+                <Label Text="ACCESSORIES" CharacterSpacing="2.4" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+            </Grid>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
