@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.PlayerDitailsPage"
+             BackgroundColor="White">
+    <StackLayout>
+        <Image Source="homeimg1.png" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+        <Label Text="John Doe" TextColor="Black" HorizontalOptions="Center" FontSize="Large" Margin="10,0,10,10" />
+        <!--<Grid BackgroundColor="Red" Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand">
+                <Label  HorizontalOptions="Center" Text="26" TextColor="{StaticResource greenColor}" FontSize="Medium"/>
+                <Label Text="Rank" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
+            </StackLayout>
+
+            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                <Label Text=".504"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
+                <Label Text="Win%" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
+            </StackLayout>
+
+            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand">
+                <Label Text="PG"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
+                <Label Text="Pos." HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
+            </StackLayout>
+            
+            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand">
+                <Label Text="5'9"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
+                <Label Text="Height" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
+            </StackLayout>
+        </Grid>-->
+
+
+    <Button Text="Follow" FontSize="Micro" Margin="25" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White"/>
+
+    </StackLayout>
+</ContentPage>

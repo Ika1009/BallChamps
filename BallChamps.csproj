@@ -57,8 +57,10 @@
 	  <None Remove="Resources\Images\iconDirection.png" />
 	  <None Remove="Resources\Images\iconEditImg.png" />
 	  <None Remove="Resources\Images\iconEmail.png" />
+	  <None Remove="Resources\Images\iconGrayStar.png" />
 	  <None Remove="Resources\Images\iconGreenArrow.png" />
 	  <None Remove="Resources\Images\iconGreenUser.png" />
+	  <None Remove="Resources\Images\iconHalfYellowStar.png" />
 	  <None Remove="Resources\Images\iconHeight.png" />
 	  <None Remove="Resources\Images\iconMoreInfo.png" />
 	  <None Remove="Resources\Images\iconOrangeCamera.png" />
@@ -74,7 +76,11 @@
 	  <None Remove="Resources\Images\icon_tab_profile.png" />
 	  <None Remove="Resources\Images\icon_tab_rank.png" />
 	  <None Remove="Resources\Images\icon_tab_shop.png" />
+	  <None Remove="Resources\Images\iconYellowStar.png" />
 	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\ShopImg1.png" />
+	  <None Remove="Resources\Images\ShopImg2.png" />
+	  <None Remove="Resources\Images\ShopImg3.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -101,16 +107,25 @@
 	  <MauiXaml Update="View\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\InboxPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\IntroPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\PlayerDitailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\RankPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ShopPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\SignUpPage.xaml">
