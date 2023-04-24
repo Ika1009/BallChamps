@@ -88,6 +88,9 @@
 	  <MauiXaml Update="View\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\InboxPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\IntroPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
