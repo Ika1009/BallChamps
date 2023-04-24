@@ -16,13 +16,7 @@
             <Color x:Key="greenColor">#3dab6f</Color>
             <x:Double x:Key="fontSize">22</x:Double>
 
-            <!--Style x:Key="baseLabelStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="{StaticResource fontSize}" />
-            </Style>
-            <Style x:Key="infoLabelStyle" BasedOn="{StaticResource baseLabelStyle}" TargetType="Label">
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style-->
-
         </ResourceDictionary>
     </Application.Resources>
+    
 </Application>

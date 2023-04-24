@@ -3,12 +3,34 @@
     x:Class="BallChamps.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:BallChamps.View"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:BallChamps.View"
+    Shell.FlyoutBehavior="Flyout">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:IntroPage}"
-        Route="IntroPage" />
+    <ShellContent Title="Login"
+                  Route="LoginPage"
+                  ContentTemplate="{DataTemplate views:LoginPage}" 
+                  />
 
+    <TabBar Route="Home" Shell.BackgroundColor="Transparent">
+        <ShellContent Title="Home" 
+                      Route="HomePage"
+                     Icon="icon_tab_home.png"
+                     ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent Title="Profile"
+                      Route="ProfilePage"
+                     Icon="icon_tab_profile.png"
+                     ContentTemplate="{DataTemplate views:ProfilePage}" />
+        <ShellContent Title="Courts"
+                      Route="CourtsPage"
+                     Icon="icon_tab_courts.png"
+                     ContentTemplate="{DataTemplate views:CourtsPage}" />
+        <ShellContent Title="Rank"
+                      Route="RankPage"
+                     Icon="icon_tab_rank.png"
+                     ContentTemplate="{DataTemplate views:RankPage}" />
+        <ShellContent Title="Shopping"
+                      Route="ShoppingPage"
+                     Icon="icon_tab_shopping.png"
+                     ContentTemplate="{DataTemplate views:HomePage}" />
+    </TabBar>
 </Shell>

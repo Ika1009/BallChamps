@@ -69,7 +69,20 @@
 	  <None Remove="Resources\Images\iconSkill.png" />
 	  <None Remove="Resources\Images\iconStyleofPlay.png" />
 	  <None Remove="Resources\Images\iconWaitingList.png" />
+	  <None Remove="Resources\Images\icon_tab_courts.png" />
+	  <None Remove="Resources\Images\icon_tab_home.png" />
+	  <None Remove="Resources\Images\icon_tab_profile.png" />
+	  <None Remove="Resources\Images\icon_tab_rank.png" />
+	  <None Remove="Resources\Images\icon_tab_shop.png" />
 	  <None Remove="Resources\Images\logo.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\AppIcon\icon_tab_courts.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_home.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_profile.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_rank.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_shop.png" />
 	</ItemGroup>
 
 	<ItemGroup>

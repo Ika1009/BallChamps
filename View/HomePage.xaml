@@ -5,6 +5,7 @@
              BackgroundImageSource="background.png">
 
     <ScrollView BackgroundColor="White">
+        
         <VerticalStackLayout>
 
             <Frame Padding="12" BackgroundColor="White" Margin="10" BorderColor="{StaticResource lightGrayColor}" CornerRadius="10">
