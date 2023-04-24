@@ -2,12 +2,15 @@ namespace BallChamps.View;
 
 public partial class ForgotPasswordPage : ContentPage
 {
-	public ForgotPasswordPage()
+	LoginPage loginPageSender;
+	public ForgotPasswordPage(LoginPage loginSender)
 	{
 		InitializeComponent();
-	}
-	async void OnLoginClicked(object sender, TappedEventArgs args)
+		loginPageSender = loginSender;
+
+    }
+	async void OnLoginClicked(object sender, EventArgs args)
 	{
-	    	await Navigation.PopAsync();
+	    await Navigation.PushModalAsync(loginPageSender, true);
 	}
 }

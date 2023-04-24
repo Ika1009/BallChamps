@@ -8,10 +8,10 @@ public partial class IntroPage : ContentPage
 	}
     async void LoginButton_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new LoginPage());
+        await Navigation.PushModalAsync(new LoginPage(), true);
     }
     async void SignUpButton_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new SignUpPage());
+        await Navigation.PushModalAsync(new SignUpPage(), true);
     }
 }

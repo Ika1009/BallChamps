@@ -2,22 +2,22 @@ namespace BallChamps.View;
 
 public partial class LoginPage : ContentPage
 {
+	SignUpPage signUpPage; // use only one instance of signUpPage for optimization
 	public LoginPage()
 	{
 		InitializeComponent();
 	}
-
-	async void LoginButton_Clicked(object sender, EventArgs e)
+    async void LoginButton_Clicked(object sender, EventArgs e)
 	{
-		await Navigation.PushModalAsync(new HomePage());
+		await Navigation.PushModalAsync(new HomePage(), true);
 	}
-	async void OnSignUpClicked(object sender, TappedEventArgs args)
+	async void OnSignUpClicked(object sender, EventArgs args)
 	{
-	    	await Navigation.PushModalAsync(new SignUpPage());
+		signUpPage ??= new SignUpPage(this);
+        await Navigation.PushModalAsync(signUpPage, true);
 	}
-	async void OnForgotPasswordClicked(object sender, TappedEventArgs args)
+	async void OnForgotPasswordClicked(object sender, EventArgs args)
 	{
-		// this needs to be regular because on forgot you should pop for performance
-	    	await Navigation.PushAsync(new ForgotPasswordPage()); 
+	    await Navigation.PushModalAsync(new ForgotPasswordPage(this), true); 
 	}
 }
