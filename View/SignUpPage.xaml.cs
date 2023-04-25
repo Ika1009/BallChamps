@@ -2,7 +2,7 @@ namespace BallChamps.View;
 
 public partial class SignUpPage : ContentPage
 {
-    LoginPage loginPageSender; // this is used to only have one instance of the loginPage for optimizations
+    //LoginPage loginPageSender; // this is used to only have one instance of the loginPage for optimizations
     public SignUpPage()
 	{
 		InitializeComponent();
@@ -10,14 +10,15 @@ public partial class SignUpPage : ContentPage
     public SignUpPage(LoginPage lpSender)
     {
         InitializeComponent();
-		loginPageSender = lpSender;
+		//loginPageSender = lpSender;
     }
     async void SignInButton_Clicked(object sender, EventArgs e)
 	{
-		await Navigation.PushModalAsync(new HomePage(), true);
-	}
-	async void OnLoginClicked(object sender, EventArgs args)
+        await Shell.Current.GoToAsync("//Home/HomePage");
+    }
+    async void OnLoginClicked(object sender, EventArgs args)
 	{
-	    await Navigation.PushModalAsync(loginPageSender, true);
-	}
+        // await Navigation.PushModalAsync(loginPageSender, true);
+        await Shell.Current.GoToAsync("//Login");
+    }
 }

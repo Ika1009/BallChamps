@@ -4,6 +4,7 @@
              x:Class="BallChamps.View.SignUpPage"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
              BackgroundImageSource="background.png">
     <Grid BackgroundColor="Transparent">
         <Grid.RowDefinitions>

@@ -4,6 +4,7 @@
              x:Class="BallChamps.View.IntroPage"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
              BackgroundImageSource="background.png" >
     <Grid>
         <Grid.RowDefinitions>
