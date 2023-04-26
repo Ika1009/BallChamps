@@ -62,5 +62,9 @@
         <ShellContent Title="LogOut"
                      Icon="icon_orange_logout.png"
                      ContentTemplate="{DataTemplate views:HomePage}" />
-
+        
+        <Shell.FlyoutHeader>
+            <Image Source="flyout_header.png"></Image>
+        </Shell.FlyoutHeader>
+    
 </Shell>
