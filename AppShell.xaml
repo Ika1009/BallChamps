@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:BallChamps.View"
-    FlyoutBackgroundImage="background.png"
+    FlyoutBackgroundImage="dotnet_bot.png"
     FlyoutBackgroundImageAspect="AspectFill"
     Shell.FlyoutBehavior="Flyout">
 
@@ -53,22 +53,15 @@
     <ShellContent Title="Inbox"
                      Icon="icon_orange_inbox.png"
                      ContentTemplate="{DataTemplate views:HomePage}" />
-
-        <ShellContent Title="Settings"
-                     Icon="icon_orange_setting.png"
-                     ContentTemplate="{DataTemplate views:HomePage}" />
-        <ShellContent Title="About Us"
-                     Icon="icon_orange_about_us.png"
-                     ContentTemplate="{DataTemplate views:HomePage}" />
-
-        <ShellContent Title="LogOut"
-                     Icon="icon_orange_logout.png"
-                     ContentTemplate="{DataTemplate views:HomePage}" />
-    
-         <MenuItem Text="Log Out"
-              IconImageSource="icon_orange_logout.png"
-              Command="{Binding HelpCommand}"
-              CommandParameter="https://learn.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
+    <ShellContent Title="Settings"
+                    Icon="icon_orange_setting.png"
+                    ContentTemplate="{DataTemplate views:HomePage}" />
+    <ShellContent Title="About Us"
+                    Icon="icon_orange_about_us.png"
+                    ContentTemplate="{DataTemplate views:HomePage}" />
+    <MenuItem Text="Log Out"
+              x:Name="logOutItem"
+        IconImageSource="icon_orange_logout.png" />
     
         <Shell.FlyoutHeader>
             <Image Source="flyout_header.png"></Image>
