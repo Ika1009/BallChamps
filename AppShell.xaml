@@ -4,6 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:BallChamps.View"
+    FlyoutBackgroundImage="background.png"
+    FlyoutBackgroundImageAspect="AspectFill"
     Shell.FlyoutBehavior="Flyout">
 
     <ShellContent Title="Intro"
@@ -62,7 +64,12 @@
         <ShellContent Title="LogOut"
                      Icon="icon_orange_logout.png"
                      ContentTemplate="{DataTemplate views:HomePage}" />
-        
+    
+         <MenuItem Text="Log Out"
+              IconImageSource="icon_orange_logout.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://learn.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
+    
         <Shell.FlyoutHeader>
             <Image Source="flyout_header.png"></Image>
         </Shell.FlyoutHeader>
