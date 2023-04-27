@@ -32,10 +32,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\icon.png" Color="#f34d01"/>
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#f34d01" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -95,8 +95,8 @@
 	  <MauiImage Include="Resources\AppIcon\icon_orange_inbox.png" />
 	  <MauiImage Include="Resources\AppIcon\icon_orange_setting.png" />
 	  <MauiImage Include="Resources\AppIcon\icon_orange_logout.png" />
-		<MauiImage Include="Resources\AppIcon\icon_orange_card.png" />
-		<MauiImage Include="Resources\AppIcon\icon_orange_about_us.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_orange_card.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_orange_about_us.png" />
 	</ItemGroup>
 
 	<ItemGroup>
