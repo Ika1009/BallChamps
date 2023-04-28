@@ -40,7 +40,7 @@
                      ContentTemplate="{DataTemplate views:RankPage}" />
         <ShellContent Title="Shopping"
                       Icon="icon_tab_shop.png"
-                     ContentTemplate="{DataTemplate views:HomePage}" />
+                     ContentTemplate="{DataTemplate views:ShopPage}" />
     </FlyoutItem>
 
     <ShellContent Title="Game"

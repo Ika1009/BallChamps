@@ -55,6 +55,9 @@
                 </Grid>
 
                 <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" BackgroundColor="{StaticResource lightGrayColor}">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Grid.GestureRecognizers>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>

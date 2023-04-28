@@ -241,7 +241,7 @@
             
             
         </ScrollView>
-            <Button Grid.Row="1" Text="SAVE" FontAttributes="Bold" HeightRequest="60" FontSize="Micro" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White" Margin="25,10,25,10" />
+            <Button Grid.Row="1" Text="SAVE" FontAttributes="Bold" HeightRequest="60" FontSize="Micro" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White" Margin="25,10,25,10" Clicked="Button_Clicked" />
     </Grid>
     
 </ContentPage>
