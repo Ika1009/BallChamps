@@ -45,7 +45,7 @@
 
     <ShellContent Title="Game"
                      Icon="icon_orange_court.png"
-                     ContentTemplate="{DataTemplate views:CourtsPage}" />
+                     ContentTemplate="{DataTemplate views:CourtsPage}"/>
 
     <ShellContent Title="My Cards"
                          Icon="icon_orange_card.png"
