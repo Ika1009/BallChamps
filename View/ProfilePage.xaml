@@ -2,8 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BallChamps.View.ProfilePage"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             Title="Profile">
 
+    <!--Shell.TitleView>
+        <HorizontalStackLayout>
+            <Label Text="Profile" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" Padding="10, 5, 10, 5" HorizontalOptions="StartAndExpand"></Label>
+            <Button Text="" HeightRequest="50" WidthRequest="100" HorizontalOptions="EndAndExpand"></Button>
+        </HorizontalStackLayout>
+    </Shell.TitleView-->
+    
     <ScrollView>
         <StackLayout>
             <Image Source="homeimg1.png" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />

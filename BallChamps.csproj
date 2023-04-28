@@ -32,10 +32,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#f34d01"/>
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#512BD4" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#f34d01" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -86,9 +86,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\AddNewAddressPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	  <MauiImage Include="Resources\AppIcon\icon_tab_courts.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_home.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_profile.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_rank.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_shop.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="View\ConversationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
