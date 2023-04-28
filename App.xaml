@@ -15,7 +15,13 @@
             <Color x:Key="lightGrayColor">#d1d4d1</Color>
             <Color x:Key="greenColor">#3dab6f</Color>
             <x:Double x:Key="fontSize">22</x:Double>
-
+            <Style TargetType="Label"
+            Class="FlyoutItemLabelStyle">
+                <Setter Property="TextColor"
+            Value="White" />
+                <Setter Property="HeightRequest"
+            Value="120" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
     
