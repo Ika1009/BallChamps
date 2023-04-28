@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.PaymentPage"
+             Title="PaymentPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="0">
+            <StackLayout>
+                <Frame Margin="10" Padding="0" BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}">
+                    <Grid Margin="0" Padding="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <RadioButton Margin="10" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="{StaticResource orangeColor}" Grid.Column="0"/>
+
+                        <StackLayout Margin="10" Grid.Row="0" BackgroundColor="White" Grid.Column="1">
+                            <Label Text="Home" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
+
+                            <Label Text="**** **** **** 1234" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+
+                        </StackLayout>
+
+                        <StackLayout Margin="10" Grid.Row="0" BackgroundColor="White" Grid.Column="2">
+                            <Label Text="Expire Date" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
+
+                            <Label Text="01/12" FontAttributes="Bold" FontSize="Medium" TextColor="Black"/>
+
+                        </StackLayout>
+
+                        <BoxView Color="{StaticResource lightGrayColor}" Grid.Row="1" WidthRequest="700"/>
+
+                        <Grid Grid.Row="2" Margin="10,0,10,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="1"/>
+                                <ColumnDefinition Width="180"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ImageButton Margin="0,10,10,10" Source="iconedit.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0"/>
+
+                            <BoxView Color="{StaticResource lightGrayColor}" Grid.Column="1"/>
+
+                            <ImageButton Margin="0,10,10,10" Source="icondelete.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2"/>
+                        </Grid>
+
+
+                    </Grid>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+        <BoxView Color="{StaticResource lightGrayColor}"  Grid.Row="1"/>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <HorizontalStackLayout Margin="20" Grid.Row="0" BackgroundColor="White" Grid.Column="0">
+
+                <Label Text="Total : " FontSize="25"  FontAttributes="Bold" TextColor="Black"/>
+
+                <Label Text="$261" FontAttributes="Bold" FontSize="25" TextColor="{StaticResource orangeColor}"/>
+
+            </HorizontalStackLayout>
+
+            <Button Grid.Column="1" Text="Pay" Padding="5" FontSize="25" TextColor="White"  BackgroundColor="{StaticResource orangeColor}" Margin="17,10,17,10"/>
+
+        </Grid>
+
+        <ImageButton Grid.Row="0" Source="iconadd.png" Margin="0,0,10,10" HeightRequest="70" WidthRequest="70" VerticalOptions="End" HorizontalOptions="End"/>
+    </Grid>
+   
+
+</ContentPage>

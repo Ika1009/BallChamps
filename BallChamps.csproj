@@ -32,10 +32,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#f34d01"/>
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#f34d01" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#f34d01" BaseSize="128,128" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#f34d01" BaseSize="1200,1000" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -49,12 +49,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\AboutUsImg2.png" />
 	  <None Remove="Resources\Images\HomeImg1.png" />
 	  <None Remove="Resources\Images\HomeImg2.png" />
 	  <None Remove="Resources\Images\HomeImg3.png" />
+	  <None Remove="Resources\Images\iconAdd.png" />
 	  <None Remove="Resources\Images\iconAge.png" />
+	  <None Remove="Resources\Images\iconCity.png" />
 	  <None Remove="Resources\Images\iconClock.png" />
+	  <None Remove="Resources\Images\iconDelete.png" />
 	  <None Remove="Resources\Images\iconDirection.png" />
+	  <None Remove="Resources\Images\iconEdit.png" />
 	  <None Remove="Resources\Images\iconEditImg.png" />
 	  <None Remove="Resources\Images\iconEmail.png" />
 	  <None Remove="Resources\Images\iconGrayStar.png" />
@@ -62,13 +67,18 @@
 	  <None Remove="Resources\Images\iconGreenUser.png" />
 	  <None Remove="Resources\Images\iconHalfYellowStar.png" />
 	  <None Remove="Resources\Images\iconHeight.png" />
+	  <None Remove="Resources\Images\iconHouseNo.png" />
+	  <None Remove="Resources\Images\iconLandMark.png" />
 	  <None Remove="Resources\Images\iconMoreInfo.png" />
 	  <None Remove="Resources\Images\iconOrangeCamera.png" />
 	  <None Remove="Resources\Images\iconOrangeUser.png" />
 	  <None Remove="Resources\Images\iconPassword.png" />
+	  <None Remove="Resources\Images\iconPhone.png" />
+	  <None Remove="Resources\Images\iconPincode.png" />
 	  <None Remove="Resources\Images\iconPosition.png" />
 	  <None Remove="Resources\Images\iconSend.png" />
 	  <None Remove="Resources\Images\iconSkill.png" />
+	  <None Remove="Resources\Images\iconState.png" />
 	  <None Remove="Resources\Images\iconStyleofPlay.png" />
 	  <None Remove="Resources\Images\iconWaitingList.png" />
 	  <None Remove="Resources\Images\iconYellowStar.png" />
@@ -116,6 +126,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\PaymentPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\PlayerDitailsPage.xaml">

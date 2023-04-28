@@ -3,10 +3,231 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BallChamps.View.AddNewAddressPage"
              Title="AddNewAddressPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Grid.Row="0" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="iconpincode.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Pincode"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Grid.Row="1" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="iconhouseno.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="House No., Building Name"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Grid.Row="3" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="iconcity.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="City"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Grid.Row="4" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="iconstate.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="State"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Grid.Row="5" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="iconlandmark.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Landmark (Optional)"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Grid.Row="6" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="iconorangeuser.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Full Name"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Grid.Row="7" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="iconphone.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Mobile Number"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+
+        <Label Text="Address type: " Margin="25,0,25,0" Grid.Row="8" Padding="5" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+
+        <Grid Grid.Row="9" Margin="20,0,20,0" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <RadioButton Grid.Column="0" Grid.Row="0" BackgroundColor="{StaticResource orangeColor}"></RadioButton>
+            <Label Text="Home Address" Padding="0,5,0,5" Grid.Column="1" Grid.Row="0" TextColor="Black" FontAttributes="Bold" FontSize="17"/>
+
+            <RadioButton Grid.Column="0" Grid.Row="1" BackgroundColor="{StaticResource orangeColor}"></RadioButton>
+            <Label Text="Work / Office Address" Padding="0,5,0,5" Grid.Column="1" Grid.Row="1" TextColor="Black" FontAttributes="Bold" FontSize="17"/>
+
+            <RadioButton Grid.Column="0" Grid.Row="2" BackgroundColor="{StaticResource orangeColor}"></RadioButton>
+            <Label Text="Other" Padding="0,5,0,5" Grid.Column="1" Grid.Row="2" TextColor="Black" FontAttributes="Bold" FontSize="17"/>
+
+        </Grid>
+        
+        <Frame Grid.Row="10" BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Margin="25,10,25,10">
+            <Grid Margin="0,10,0,10" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="aboutusimg2.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Other Address"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+            </Grid>
+        </Frame>
+
+        <Button Grid.Row="11" Text="Save" TextColor="White" FontSize="Medium" BackgroundColor="{StaticResource orangeColor}" Margin="10"/>
+    </Grid>
 </ContentPage>
