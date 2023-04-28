@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.SelectAddressPage"
+             Title="SelectAddressPage"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <Button Text="+Add New Address" TextColor="White" FontSize="Medium" BackgroundColor="{StaticResource greenColor}" Margin="10" Grid.Row="0"/>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <Frame Margin="10" Padding="0" BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <RadioButton VerticalOptions="Start" BackgroundColor="{StaticResource orangeColor}" Grid.Column="0"/>
+
+                        <StackLayout BackgroundColor="White" Grid.Column="1">
+                            <Label Text="Home" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+
+                            <Label Text="3372 Sycamore Cicrle Dallas," TextColor="Black"/>
+                            <Label Text="TX 75234" TextColor="Black"/>
+
+                            <Label Text="+91 11111 22222" Margin="0,10,0,0" TextColor="Black"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>
+
+                <Frame Margin="10" Padding="0" BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <RadioButton VerticalOptions="Start" BackgroundColor="{StaticResource orangeColor}" Grid.Column="0"/>
+
+                        <StackLayout BackgroundColor="White" Grid.Column="1">
+                            <Label Text="Office" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+
+                            <Label Text="991 Elk Creek Road, Smyrna," TextColor="Black"/>
+                            <Label Text="CA 30085" TextColor="Black"/>
+
+                            <Label Text="+91 12345 12345" Margin="0,10,0,0" TextColor="Black"/>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
+
+        <Button Text="Deliver Here" TextColor="White" FontSize="Medium" BackgroundColor="{StaticResource orangeColor}" Margin="10" Grid.Row="2"/>
+    </Grid>
+</ContentPage>

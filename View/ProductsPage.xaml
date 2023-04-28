@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.ProductsPage"
+             xmlns:model="clr-namespace:BallChamps.Model"
+             xmlns:view="clr-namespace:BallChamps.View"
+             x:DataType="view:ProductsPage"
+             BackgroundColor="White">
+    
+    <!--<CollectionView SelectionMode="None" ItemsSource="{Binding products}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="3"/>
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="model:Product">
+                <Grid BackgroundColor="Black">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="productimg1.png" Scale="0.9" Grid.Row="0" Aspect="AspectFill"/>
+
+                    <Image Source="productpricebackicon.png" Grid.Row="0" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="End"/>
+
+                    <Label Text="Sport T-Shirt 1" Grid.Row="1" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        
+    </CollectionView>-->
+
+    <ScrollView>
+        <StackLayout Padding="0,10,0,10">
+
+            <Grid BackgroundColor="#1a1a1a" WidthRequest="200" Padding="0" Margin="0,10,0,10">
+                <Grid.Shadow>
+                    <Shadow Brush="#1a1a1a"
+                        Radius="20"
+                        Opacity="0.6"/>
+                </Grid.Shadow>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="productimg1.png" Aspect="AspectFill"/>
+
+                    <Image Source="productpricebackicon.png" WidthRequest="70" VerticalOptions="Start" HorizontalOptions="End"/>
+
+                    <Label Text="$73" Grid.Row="1" TextColor="White" Padding="0,2,15,0" FontSize="Medium" HorizontalTextAlignment="End" VerticalTextAlignment="Start" BackgroundColor="Transparent"/>
+                </Grid>
+
+                <Label Text="Sport T-Shirt 1" Padding="10" Grid.Row="1" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+
+
+            </Grid>
+            
+            <Grid BackgroundColor="#1a1a1a" WidthRequest="200" Padding="0" Margin="0,10,0,10">
+                <Grid.Shadow>
+                    <Shadow Brush="#1a1a1a"
+                        Radius="20"
+                        Opacity="0.6"/>
+                </Grid.Shadow>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="productimg2.png" Aspect="AspectFill"/>
+
+                    <Image Source="productpricebackicon.png" WidthRequest="70" VerticalOptions="Start" HorizontalOptions="End"/>
+
+                    <Label Text="$42" Grid.Row="1" TextColor="White" Padding="0,2,15,0" FontSize="Medium" HorizontalTextAlignment="End" VerticalTextAlignment="Start" BackgroundColor="Transparent"/>
+                </Grid>
+
+                <Label Text="Sport T-Shirt 2" Padding="10" Grid.Row="1" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+                
+                
+
+            </Grid>
+
+            <Grid BackgroundColor="#1a1a1a" WidthRequest="200" Padding="0" Margin="0,10,0,10">
+                <Grid.Shadow>
+                    <Shadow Brush="#1a1a1a"
+                        Radius="20"
+                        Opacity="0.6"/>
+                </Grid.Shadow>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="productimg3.png" BackgroundColor="White" Aspect="AspectFill"/>
+
+                    <Image Source="productpricebackicon.png" WidthRequest="70" VerticalOptions="Start" HorizontalOptions="End"/>
+
+                    <Label Text="$54" Grid.Row="1" TextColor="White" Padding="0,2,15,0" FontSize="Medium" HorizontalTextAlignment="End" VerticalTextAlignment="Start" BackgroundColor="Transparent"/>
+                </Grid>
+
+                <Label Text="BB 4000 Basketball Shoes" Padding="10" Grid.Row="1" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+
+
+            </Grid>
+
+            <Grid BackgroundColor="#1a1a1a" WidthRequest="200" Padding="0" Margin="0,10,0,10">
+                <Grid.Shadow>
+                    <Shadow Brush="#1a1a1a"
+                        Radius="20"
+                        Opacity="0.6"/>
+                </Grid.Shadow>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="productimg4.png" BackgroundColor="White" Aspect="AspectFill"/>
+
+                    <Image Source="productpricebackicon.png" WidthRequest="70" VerticalOptions="Start" HorizontalOptions="End"/>
+
+                    <Label Text="$31" Grid.Row="1" TextColor="White" Padding="0,2,15,0" FontSize="Medium" HorizontalTextAlignment="End" VerticalTextAlignment="Start" BackgroundColor="Transparent"/>
+                </Grid>
+
+                <Label Text="Sky Modern Basketball Shoes" Padding="10" Grid.Row="1" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+
+
+            </Grid>
+
+            <Grid BackgroundColor="#1a1a1a" WidthRequest="200" Padding="0" Margin="0,10,0,10">
+                <Grid.Shadow>
+                    <Shadow Brush="#1a1a1a"
+                        Radius="20"
+                        Opacity="0.6"/>
+                </Grid.Shadow>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="productimg5.png" Aspect="AspectFill"/>
+
+                    <Image Source="productpricebackicon.png" WidthRequest="70" VerticalOptions="Start" HorizontalOptions="End"/>
+
+                    <Label Text="$88" Grid.Row="1" TextColor="White" Padding="0,2,15,0" FontSize="Medium" HorizontalTextAlignment="End" VerticalTextAlignment="Start" BackgroundColor="Transparent"/>
+                </Grid>
+
+                <Label Text="Baketball" Padding="10" Grid.Row="1" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+
+
+            </Grid>
+
+            <Grid BackgroundColor="#1a1a1a" WidthRequest="200" Padding="0" Margin="0,10,0,10">
+                <Grid.Shadow>
+                    <Shadow Brush="#1a1a1a"
+                        Radius="20"
+                        Opacity="0.6"/>
+                </Grid.Shadow>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="productimg6.png" Aspect="AspectFill"/>
+
+                    <Image Source="productpricebackicon.png" WidthRequest="70" VerticalOptions="Start" HorizontalOptions="End"/>
+
+                    <Label Text="$95" Grid.Row="1" TextColor="White" Padding="0,2,15,0" FontSize="Medium" HorizontalTextAlignment="End" VerticalTextAlignment="Start" BackgroundColor="Transparent"/>
+                </Grid>
+
+                <Label Text="Basketball hoop" Padding="10" Grid.Row="1" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+
+
+
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+    
+
+</ContentPage>

@@ -8,7 +8,7 @@
 
     <ShellContent Title="Intro"
                 Route="Intro"
-                ContentTemplate="{DataTemplate views:IntroPage}" />
+                ContentTemplate="{DataTemplate views:SelectAddressPage}" />
 
     <ShellContent Title="Sign Up"
                 Route="SignUp"

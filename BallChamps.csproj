@@ -71,27 +71,24 @@
 	  <None Remove="Resources\Images\iconSkill.png" />
 	  <None Remove="Resources\Images\iconStyleofPlay.png" />
 	  <None Remove="Resources\Images\iconWaitingList.png" />
-	  <None Remove="Resources\Images\icon_tab_courts.png" />
-	  <None Remove="Resources\Images\icon_tab_home.png" />
-	  <None Remove="Resources\Images\icon_tab_profile.png" />
-	  <None Remove="Resources\Images\icon_tab_rank.png" />
-	  <None Remove="Resources\Images\icon_tab_shop.png" />
 	  <None Remove="Resources\Images\iconYellowStar.png" />
 	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\ProductImg1.png" />
+	  <None Remove="Resources\Images\ProductImg2.png" />
+	  <None Remove="Resources\Images\ProductImg3.png" />
+	  <None Remove="Resources\Images\ProductImg4.png" />
+	  <None Remove="Resources\Images\ProductImg5.png" />
+	  <None Remove="Resources\Images\ProductImg6.png" />
+	  <None Remove="Resources\Images\ProductPriceBackicon.png" />
 	  <None Remove="Resources\Images\ShopImg1.png" />
 	  <None Remove="Resources\Images\ShopImg2.png" />
 	  <None Remove="Resources\Images\ShopImg3.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiImage Include="Resources\AppIcon\icon_tab_courts.png" />
-	  <MauiImage Include="Resources\AppIcon\icon_tab_home.png" />
-	  <MauiImage Include="Resources\AppIcon\icon_tab_profile.png" />
-	  <MauiImage Include="Resources\AppIcon\icon_tab_rank.png" />
-	  <MauiImage Include="Resources\AppIcon\icon_tab_shop.png" />
-	</ItemGroup>
-
-	<ItemGroup>
+	  <MauiXaml Update="View\AddNewAddressPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ConversationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -119,10 +116,16 @@
 	  <MauiXaml Update="View\PlayerDitailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\ProductsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\RankPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SelectAddressPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ShopPage.xaml">
