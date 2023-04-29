@@ -21,6 +21,7 @@
             Value="White" />
                 <Setter Property="HeightRequest"
             Value="120" />
+                <Setter Property="FontSize" Value="Medium"></Setter>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

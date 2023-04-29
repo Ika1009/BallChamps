@@ -19,19 +19,25 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Image Source="ballchamps_logo.png" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <!-- Logo in the upper half -->
+        <Image Source="logo.png"
+           Aspect="AspectFit"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+               HeightRequest="1000"
+               Margin="0"/>
 
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Margin="25">
-            <Label Text="Login" TextColor="{StaticResource orangeColor}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Padding="2"/>
+            <Label Text="Login" TextColor="{StaticResource orangeColor}" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Padding="2"/>
 
-            <Label Text="Please login to continue" TextColor="White" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"  Padding="5"/>
+            <Label Text="Please login to continue" TextColor="White" FontSize="Subtitle" HorizontalOptions="Center" VerticalOptions="Center"  Padding="5"/>
         </VerticalStackLayout>
 
 
         <Frame BackgroundColor="Transparent" BorderColor="White" HasShadow="False" CornerRadius="5" Padding="5,2,5,2" Grid.Row="2" Margin="10">
             <StackLayout Orientation="Horizontal"
                  BackgroundColor="Transparent"
-                 Margin="5,0,0,5"
+                 Margin="5,0,0,0"
                  Padding="5">
                 <Image Source="iconorangeuser.png"
                    HeightRequest="25"
@@ -39,12 +45,12 @@
                    VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Aspect="Fill"
-                       Margin="0,2,2,2"/>
+                       Margin="0,2,5,2"/>
 
                 <Entry PlaceholderColor="White" Placeholder="Username"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
-               HeightRequest="30"/>
+               HeightRequest="40"/>
 
             </StackLayout>
         </Frame>
@@ -60,12 +66,12 @@
                    VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Aspect="Fill"
-                       Margin="0,2,2,2"/>
+                       Margin="0,2,5,2"/>
 
                 <Entry PlaceholderColor="White" Placeholder="Password"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
-               HeightRequest="30"/>
+               HeightRequest="40"/>
 
             </StackLayout>
         </Frame>
@@ -76,20 +82,20 @@
 
         <StackLayout Orientation="Horizontal" Grid.Row="4" Margin="10,5,10,5">
             <CheckBox Color="{StaticResource orangeColor}"/>
-            <Label Text="Remember me?" FontSize="Micro" VerticalOptions="Center" />
+            <Label Text="Remember me?" FontSize="Small" VerticalOptions="Center" TextColor="Gray" />
         </StackLayout>
 
-        <Button Text="Login" BackgroundColor="{StaticResource orangeColor}" FontSize="Small" TextColor="White" Grid.Row="5" Margin="10" Clicked="LoginButton_Clicked" />
+        <Button Text="Login" BackgroundColor="{StaticResource orangeColor}" FontSize="Medium" TextColor="White" Grid.Row="5" Margin="10" Clicked="LoginButton_Clicked" />
 
-        <Label Text="Forgot password?" TextColor="Gray" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" Grid.Row="6">
+        <Label Text="Forgot password?" TextColor="Gray" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" Grid.Row="6">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnForgotPasswordClicked"/>
             </Label.GestureRecognizers>
         </Label>
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="7" Margin="35">
-            <Label Text="Don't have an account? " TextColor="White" FontSize="Micro" VerticalOptions="Center" />
-            <Label Text=" Sign Up" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Center">
+            <Label Text="Don't have an account? " TextColor="White" FontSize="Small" VerticalOptions="Center" />
+            <Label Text=" Sign Up" TextColor="{StaticResource orangeColor}" FontSize="Small" VerticalOptions="Center">
               <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnSignUpClicked"/>
               </Label.GestureRecognizers>

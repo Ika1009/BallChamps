@@ -6,7 +6,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -15,10 +15,10 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Albert L. Hernandez" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Albert L. Hernandez" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout Margin="5,0,0,0">
-                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -27,7 +27,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -36,10 +36,10 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Refina J. Mack" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Refina J. Mack" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout Margin="5,0,0,0">
-                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -48,7 +48,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -57,10 +57,10 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Walter L. Benett" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Walter L. Benett" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout Margin="5,0,0,0">
-                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -69,7 +69,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -78,10 +78,10 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Dana D. Jackson" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Dana D. Jackson" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout Margin="5,0,0,0">
-                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -90,7 +90,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -99,10 +99,10 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Alex S. Crosby" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Alex S. Crosby" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout Margin="5,0,0,0">
-                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -111,7 +111,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -120,10 +120,10 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label  Margin="5" Text="Elizabeth K. Nissen" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label  Margin="5" Text="Elizabeth K. Nissen" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout Margin="5,0,0,0">
-                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -132,7 +132,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -141,10 +141,10 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label  Margin="5" Text="Maria J. Deluca" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label  Margin="5" Text="Maria J. Deluca" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout Margin="5,0,0,0">
-                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting List: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 

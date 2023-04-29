@@ -8,7 +8,7 @@
              BackgroundImageSource="background.png">
     <Grid BackgroundColor="Transparent">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -19,11 +19,18 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
+        <!-- Logo in the upper half -->
+        <Image Source="logo.png"
+           Aspect="AspectFill"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" 
+               HeightRequest="600"
+               Margin="15"/>
 
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Margin="25">
-            <Label Text="Create Account" TextColor="{StaticResource orangeColor}" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Padding="2"/>
+            <Label Text="Create Account" TextColor="{StaticResource orangeColor}" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" Padding="2"/>
 
-            <Label Text="Please fill the input bellow here" TextColor="White" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center"  Padding="5"/>
+            <Label Text="Please fill the input bellow here" TextColor="White" FontSize="Subtitle" HorizontalOptions="Center" VerticalOptions="Center"  Padding="5"/>
         </VerticalStackLayout>
 
 
@@ -38,12 +45,12 @@
                    VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Aspect="Fill"
-                       Margin="0,2,2,2"/>
+                       Margin="0,2,5,2"/>
 
                 <Entry PlaceholderColor="White" Placeholder="Username"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
-               HeightRequest="30"/>
+               HeightRequest="40"/>
 
             </StackLayout>
         </Frame>
@@ -59,12 +66,12 @@
                    VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Aspect="Fill"
-                       Margin="0,2,2,2"/>
+                       Margin="0,2,5,2"/>
 
                 <Entry PlaceholderColor="White" Placeholder="Choose UserName"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
-               HeightRequest="30"/>
+               HeightRequest="40"/>
 
             </StackLayout>
         </Frame>
@@ -80,12 +87,12 @@
                    VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Aspect="Fill"
-                       Margin="0,2,2,2"/>
+                       Margin="0,2,5,2"/>
 
                 <Entry PlaceholderColor="White" Placeholder="Email Address"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
-               HeightRequest="30"/>
+               HeightRequest="40"/>
 
             </StackLayout>
         </Frame>
@@ -101,12 +108,12 @@
                    VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Aspect="Fill"
-                       Margin="0,2,2,2"/>
+                       Margin="0,2,5,2"/>
 
                 <Entry PlaceholderColor="White" Placeholder="Password"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
-               HeightRequest="30"/>
+               HeightRequest="40"/>
 
             </StackLayout>
         </Frame>
@@ -122,21 +129,21 @@
                    VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Aspect="Fill"
-                       Margin="0,2,2,2"/>
+                       Margin="0,2,5,2"/>
 
                 <Entry PlaceholderColor="White" Placeholder="Confirm Password"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
-               HeightRequest="30"/>
+               HeightRequest="40"/>
 
             </StackLayout>
         </Frame>
 
-        <Button Text="Sign Up" BackgroundColor="{StaticResource orangeColor}" FontSize="Small" TextColor="White" Grid.Row="7" Margin="10, 10,10,30" Clicked="SignInButton_Clicked"/>
+        <Button Text="Sign Up" BackgroundColor="{StaticResource orangeColor}" FontSize="Medium" TextColor="White" Grid.Row="7" Margin="10, 10,10,30" Clicked="SignInButton_Clicked"/>
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="8" Margin="35">
-            <Label Text="Already have an account? " TextColor="White" FontSize="Micro" VerticalOptions="Center" />
-            <Label Text=" Login In" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Center">
+            <Label Text="Already have an account? " TextColor="White" FontSize="Small" VerticalOptions="Center" />
+            <Label Text=" Login In" TextColor="{StaticResource orangeColor}" FontSize="Small" VerticalOptions="Center">
               <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnLoginClicked"/>
               </Label.GestureRecognizers>

@@ -7,7 +7,7 @@
         <VerticalStackLayout>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -16,13 +16,13 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="John Doe" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="John Doe" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
 
-                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 0.504" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 0.504" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -31,7 +31,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -40,13 +40,13 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Albert L. Hernandez" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Albert L. Hernandez" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 25" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 25" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                             
-                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 0.668" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 0.668" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -55,7 +55,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -64,13 +64,13 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Regina J. Mack" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Regina J. Mack" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 38" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 38" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
 
-                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 0.358" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 0.358" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -79,7 +79,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -88,13 +88,13 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Walter L. Benett" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Walter L. Benett" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 10" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 10" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
 
-                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 0.555" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 0.555" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -103,7 +103,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -112,13 +112,13 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Dana D. Jackson" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Dana D. Jackson" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 85" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 85" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
 
-                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 0.786" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 0.786" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -127,7 +127,7 @@
             </Frame>
 
             <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                <Grid Padding="10" Margin="0,0,0,0" Grid.Row="1" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="*"/>
@@ -136,13 +136,13 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Margin="5" Text="Alex S. Crosby" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Margin="5" Text="Alex S. Crosby" TextColor="{StaticResource orangeColor}" FontSize="Medium" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 10" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 10" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
 
-                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 0.503" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Margin="15,0,0,0" Text="Win %: " TextColor="{StaticResource grayColor}" FontSize="14" VerticalOptions="Start"/>
+                            <Label Text=" 0.503" TextColor="Black" FontSize="14" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 

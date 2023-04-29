@@ -6,7 +6,7 @@
     <ScrollView>
         <StackLayout>
             <Image Source="homeimg1.png" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
-            <Label Text="LA Fitness 1" TextColor="Black" HorizontalOptions="Center" FontSize="Large" Margin="10,0,10,10" />
+            <Label Text="LA Fitness 1" TextColor="Black" HorizontalOptions="Center" FontSize="Title" Margin="10,0,10,10" />
             <Grid Margin="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -19,21 +19,21 @@
                 </Grid.ColumnDefinitions>
                 
                 <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand">
-                    <Label  HorizontalOptions="Center" Text="26" TextColor="{StaticResource greenColor}" FontSize="Medium"/>
-                    <Label Text="Waiting List" HorizontalOptions="Center" TextColor="{StaticResource grayColor}" FontSize="Micro" />
+                    <Label  HorizontalOptions="Center" Text="26" TextColor="{StaticResource greenColor}" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label Text="Waiting List" HorizontalOptions="Center" TextColor="{StaticResource grayColor}" FontSize="Caption" FontAttributes="Bold"/>
                 </StackLayout>
 
                 <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" HeightRequest="30" WidthRequest="1" VerticalOptions="FillAndExpand" />
                 
                 <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand">
-                    <Label Text="204" HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
-                    <Label Text="Ratings" HorizontalOptions="Center" TextColor="{StaticResource grayColor}" FontSize="Micro" />
+                    <Label Text="204" HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label Text="Ratings" HorizontalOptions="Center" TextColor="{StaticResource grayColor}" FontSize="Caption" FontAttributes="Bold"/>
                 </StackLayout>
 
             </Grid>
             
             
-            <Button Text="SIGN UP" FontAttributes="Bold" FontSize="Micro" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White" Margin="25,10,25,10" />
+            <Button Text="SIGN UP" FontAttributes="Bold" FontSize="Small" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White" Margin="25,10,25,10" />
 
             <Grid Margin="10">
                 <Grid.RowDefinitions>
@@ -50,7 +50,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Source="icondirection.png" WidthRequest="30" HeightRequest="30" Margin="10, 10,15,10" Grid.Column="0"/>
-                    <Label Text="Get Directions" Margin="10" TextColor="Black" FontSize="Micro" VerticalOptions="Start" Grid.Column="1"/>
+                    <Label Text="Get Directions" Margin="10" TextColor="Black" FontSize="Small" VerticalOptions="Start" Grid.Column="1"/>
                     <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
                 </Grid>
 
@@ -65,7 +65,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Source="iconwaitinglist.png" WidthRequest="30" HeightRequest="30" Margin="10, 10,15,10" Grid.Column="0"/>
-                    <Label Text="Waiting List" Margin="10" Grid.Column="1" TextColor="Black" FontSize="Micro" VerticalOptions="Start"/>
+                    <Label Text="Waiting List" Margin="10" Grid.Column="1" TextColor="Black" FontSize="Small" VerticalOptions="Start"/>
                     <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
                 </Grid>
 
@@ -77,7 +77,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Image Source="iconmoreinfo.png" WidthRequest="30" HeightRequest="30" Margin="10, 10,15,10" Grid.Column="0"/>
-                    <Label Text="More Info" Margin="10" Grid.Column="1" TextColor="Black" FontSize="Micro" VerticalOptions="Start"/>
+                    <Label Text="More Info" Margin="10" Grid.Column="1" TextColor="Black" FontSize="Small" VerticalOptions="Start"/>
                     <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
                 </Grid>
             </Grid>

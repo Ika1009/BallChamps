@@ -18,14 +18,14 @@
            Aspect="AspectFit"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" 
-               HeightRequest="500"
-               Margin="50"/>
+               HeightRequest="1000"
+               Margin="0"/>
 
         <!-- Login button in the middle -->
         <Button Text="Log in"
             BackgroundColor="{StaticResource orangeColor}"
             TextColor="White"
-            FontSize="Small"
+            FontSize="Medium"
             FontAttributes="Bold"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="EndAndExpand"
@@ -39,7 +39,7 @@
             BorderColor="{StaticResource orangeColor}"
             BorderWidth="2"
             TextColor="White"
-            FontSize="Small"
+            FontSize="Medium"
             FontAttributes="Bold"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="StartAndExpand"

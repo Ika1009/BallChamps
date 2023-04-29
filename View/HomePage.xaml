@@ -32,8 +32,8 @@
 
                         <Image Source="homeimg1.png" Aspect="AspectFill" HeightRequest="50" WidthRequest="50"/>
                         <StackLayout Grid.Column="1" Margin="10,0,0,5">
-                            <Label Text="Albert L. Hernandez" FontSize="Small" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
-                            <Label TextColor="{StaticResource lightGrayColor}"  Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry" FontSize="11" />
+                            <Label Text="Albert L. Hernandez" FontSize="Body" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
+                            <Label TextColor="{StaticResource lightGrayColor}"  Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry" FontSize="14" />
                         </StackLayout>
                         <Label  Text="34m" FontSize="15" TextColor="{StaticResource grayColor}" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="2" />
                     </Grid>
@@ -58,8 +58,8 @@
 
                         <Image Source="homeimg3.png" Aspect="AspectFill" HeightRequest="50" WidthRequest="50"/>
                         <StackLayout Grid.Column="1" Margin="10,0,0,5">
-                            <Label Text="James N. Potter" FontSize="Small" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
-                            <Label TextColor="{StaticResource lightGrayColor}"  Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry" FontSize="11" />
+                            <Label Text="James N. Potter" FontSize="Body" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
+                            <Label TextColor="{StaticResource lightGrayColor}"  Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry" FontSize="14" />
                         </StackLayout>
                         <Label  Text="34m" FontSize="15" TextColor="{StaticResource grayColor}" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="2" />
                     </Grid>
@@ -83,8 +83,8 @@
 
                         <Image Source="homeimg1.png" Aspect="AspectFill" HeightRequest="50" WidthRequest="50"/>
                         <StackLayout Grid.Column="1" Margin="10,0,0,5">
-                            <Label Text="Albert L. Hernandez" FontSize="Small" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
-                            <Label TextColor="{StaticResource lightGrayColor}"  Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry" FontSize="11" />
+                            <Label Text="Albert L. Hernandez" FontSize="Body" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
+                            <Label TextColor="{StaticResource lightGrayColor}"  Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry" FontSize="14" />
                         </StackLayout>
                         <Label  Text="34m" FontSize="15" TextColor="{StaticResource grayColor}" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="2" />
                     </Grid>

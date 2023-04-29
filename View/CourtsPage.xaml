@@ -19,10 +19,10 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness1" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Text="La Fitness1" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -43,10 +43,10 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness2" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Text="La Fitness2" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -67,10 +67,10 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness3" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Text="La Fitness3" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -91,10 +91,10 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness4" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Text="La Fitness4" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -115,10 +115,10 @@
 
                     <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness5" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Text="La Fitness5" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
@@ -139,10 +139,10 @@
 
                     <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
                     <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness6" TextColor="{StaticResource orangeColor}" FontSize="Micro" VerticalOptions="Start"/>
+                        <Label Text="La Fitness6" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
                         <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="11" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="12" VerticalOptions="Start"/>
+                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
                         </HorizontalStackLayout>
                     </StackLayout>
 
