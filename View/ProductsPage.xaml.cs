@@ -10,6 +10,6 @@ public partial class ProductsPage : ContentPage
 	}
     private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
     {
-        // await Navigation.PushModalAsync(new Product());
+        await Navigation.PushAsync(new ProductDetailsPage());
     }
 }

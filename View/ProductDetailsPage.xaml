@@ -56,7 +56,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button  Text="Add to Cart" TextColor="Black" Grid.Column="0" WidthRequest="140" FontAttributes="Bold" FontSize="Body" BackgroundColor="White" BorderColor="{StaticResource orangeColor}" Margin="10"/>
-            <Button  Text="Buy Now" TextColor="White" Grid.Column="1" WidthRequest="140" FontSize="Body" FontAttributes="Bold" BackgroundColor="{StaticResource orangeColor}" Margin="10"/>
+            <Button  Text="Buy Now" TextColor="White" Grid.Column="1" WidthRequest="140" FontSize="Body" FontAttributes="Bold" BackgroundColor="{StaticResource orangeColor}" Margin="10" Clicked="Button_Clicked"/>
         </Grid>
 
     </Grid>
