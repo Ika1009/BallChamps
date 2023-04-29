@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.ProductDetailsPage"
+             Title="ProductDetailsPage"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Grid.Row="0">
+            <VerticalStackLayout  Padding="15,15,15,5" Margin="0">
+                <Image Source="productimg1.png" Margin="0,0,0,10" HeightRequest="200"/>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Image Source="icongraycircle.png" WidthRequest="6"/>
+                    <Image Source="icongraycircle.png" WidthRequest="6" Margin="4,0,4,0"/>
+                    <Image Source="iconorangecircle.png" WidthRequest="8"/>
+                    <Image Source="icongraycircle.png" WidthRequest="6" Margin="4,0,4,0"/>
+                    <Image Source="icongraycircle.png" WidthRequest="6"/>
+                </HorizontalStackLayout>
+                <Label Text="Sport T-Shirt 1" TextColor="Black" Margin="0,10,0,5" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="17"/>
+                <Label Text="$73" TextColor="{StaticResource orangeColor}" Margin="0,0,0,5" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="17"/>
+
+                <HorizontalStackLayout Margin="0,10,0,10">
+                    <Image Source="iconyellowstar.png" WidthRequest="13"/>
+                    <Image Source="iconyellowstar.png" WidthRequest="13" Margin="6,0,6,0"/>
+                    <Image Source="iconyellowstar.png" WidthRequest="13"/>
+                    <Image Source="iconyellowstar.png" WidthRequest="13" Margin="6,0,6,0"/>
+                    <Image Source="iconhalfyellowstar.png" WidthRequest="13"/>
+
+                    <Label Text="4.5" TextColor="Black" VerticalOptions="Center" Margin="10,0,5,0" FontAttributes="Bold" FontSize="12"/>
+                    <Label Text="608 rating" TextColor="{StaticResource lightGrayColor}" VerticalOptions="Center" FontSize="9"/>
+
+                    <Image Source="iconorangeaddbutton.png" Margin="55,0,0,0" HorizontalOptions="End" WidthRequest="70"/>
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+            
+            <BoxView BackgroundColor="{StaticResource lightGrayColor}" HeightRequest="1" />
+
+            <VerticalStackLayout Padding="15,0,15,0" Margin="0">
+                <Label Text="Details" TextColor="Black" Margin="0,10,0,5" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="14"/>
+                <Label Text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered in some form, by injected humour, or randomised words which don't look use. There are many variations of passages of Lorem Ipsum available... " TextColor="{StaticResource grayColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="11"/>
+                <Label Text="Read more" TextColor="{StaticResource orangeColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="11"/>
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+        
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button  Text="Add to Cart" TextColor="Black" Grid.Column="0" WidthRequest="140" FontAttributes="Bold" FontSize="Body" BackgroundColor="White" BorderColor="{StaticResource orangeColor}" Margin="10"/>
+            <Button  Text="Buy Now" TextColor="White" Grid.Column="1" WidthRequest="140" FontSize="Body" FontAttributes="Bold" BackgroundColor="{StaticResource orangeColor}" Margin="10"/>
+        </Grid>
+
+    </Grid>
+</ContentPage>
