@@ -6,4 +6,10 @@ public partial class SuccessfulPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+		await Navigation.PopToRootAsync();
+		await Shell.Current.GoToAsync("//HomePage");
+    }
 }

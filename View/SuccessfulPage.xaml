@@ -22,6 +22,6 @@
         </VerticalStackLayout>
         
 
-        <Button Grid.Row="11" Text="Go to Home Page" TextColor="White" Padding="10" FontSize="Medium" BackgroundColor="Transparent" BorderColor="{StaticResource orangeColor}" Margin="10"/>
+        <Button Grid.Row="11" Text="Go to Home Page" TextColor="White" Padding="10" FontSize="Medium" BackgroundColor="Transparent" BorderColor="{StaticResource orangeColor}" Margin="10" Clicked="Button_Clicked"/>
     </Grid>
 </ContentPage>

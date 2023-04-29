@@ -229,6 +229,6 @@
             </Grid>
         </Frame>
 
-        <Button Grid.Row="11" Text="Save" TextColor="White" FontSize="Medium" BackgroundColor="{StaticResource orangeColor}" Margin="10"/>
+        <Button Grid.Row="11" Text="Save" TextColor="White" FontSize="Medium" BackgroundColor="{StaticResource orangeColor}" Margin="10" Clicked="Button_Clicked"/>
     </Grid>
 </ContentPage>

@@ -81,11 +81,11 @@
 
             </HorizontalStackLayout>
 
-            <Button Grid.Column="1" Text="Pay" Padding="5" FontSize="25" TextColor="White"  BackgroundColor="{StaticResource orangeColor}" Margin="17,10,17,10"/>
+            <Button Grid.Column="1" Text="Pay" Padding="5" FontSize="25" TextColor="White"  BackgroundColor="{StaticResource orangeColor}" Margin="17,10,17,10" Clicked="Button_Clicked"/>
 
         </Grid>
 
-        <ImageButton Grid.Row="0" Source="iconadd.png" Margin="0,0,10,10" HeightRequest="70" WidthRequest="70" VerticalOptions="End" HorizontalOptions="End"/>
+        <ImageButton Grid.Row="0" Source="iconadd.png" Margin="0,0,10,10" HeightRequest="70" WidthRequest="70" VerticalOptions="End" HorizontalOptions="End" Clicked="ImageButton_Clicked"/>
     </Grid>
    
 
