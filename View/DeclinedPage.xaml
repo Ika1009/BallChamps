@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.DeclinedPage"
+             Title="DeclinedPage"
+             BackgroundImageSource="background.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Margin="10" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Column="0" Source="iconbackorange.png" BackgroundColor="Transparent" BorderColor="Transparent" WidthRequest="21" HeightRequest="21"/>
+                <Label Grid.Column="1" Margin="0,20,20,20" Text="Payment Declined" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+            </Grid>
+
+            <Image Margin="25,35,25,35" Source="icondecline.png" WidthRequest="110" HeightRequest="110"/>
+            <Label Text="$261" Margin="25,25,25,95" FontSize="35" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource orangeColor}"/>
+
+            <Label HorizontalTextAlignment="Center" Text="We aren't able to process your payment. Please try again" Margin="20,30,20,7"  FontSize="18" CharacterSpacing="1.6" HorizontalOptions="Center" TextColor="White"/>
+        </VerticalStackLayout>
+
+
+        <Button Grid.Row="11" Text="Try Again" TextColor="White" Padding="10" FontSize="Medium" BackgroundColor="Transparent" BorderColor="{StaticResource orangeColor}" Margin="10"/>
+    </Grid>
+</ContentPage>

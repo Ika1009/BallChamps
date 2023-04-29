@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.SuccessfulPage"
+             Title="SuccessfulPage"
+             BackgroundImageSource="background.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout Margin="10" Padding="10">
+            <Label Margin="20" Text="Payment Successful" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+            <Image Margin="25,35,25,35" Source="iconsuccess.png" WidthRequest="110" HeightRequest="110"/>
+            <Label Text="$261" Margin="25,25,25,35" FontSize="35" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource orangeColor}"/>
+
+            <Label Text="Mastercard" Margin="20,30,20,7"  FontSize="18" CharacterSpacing="1.6" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource orangeColor}"/>
+            <Label Text="****  ****  ****  7589" FontSize="19" Margin="0,0,0,3" TextColor="White" HorizontalOptions="Center"/>
+            <Label Text="11:20 AM, 19th April 2020" Margin="0,0,0,3" FontSize="19" TextColor="White" HorizontalOptions="Center"/>
+            <Label Text="TX ID - #8543149845" Margin="0,0,0,5" FontSize="20" TextColor="White" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+        
+
+        <Button Grid.Row="11" Text="Go to Home Page" TextColor="White" Padding="10" FontSize="Medium" BackgroundColor="Transparent" BorderColor="{StaticResource orangeColor}" Margin="10"/>
+    </Grid>
+</ContentPage>

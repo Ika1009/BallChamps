@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.AddNewCardPage"
+             Title="AddNewCardPage"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <VerticalStackLayout Grid.Row="0">
+            <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Margin="25,10,25,10">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="iconcard.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                    <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Card Number"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Margin="25,10,25,10">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="iconorangeuser.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                    <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Name"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Margin="25,10,25,10">
+                <Grid  Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="iconcalender.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                    <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Expire Date"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="Transparent" BorderColor="{StaticResource lightGrayColor}" HasShadow="False" CornerRadius="5" Padding="5" Margin="25,10,25,10">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="iconcvv.png"
+                            HeightRequest="25"
+                            WidthRequest="25"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Margin="5"
+                            Aspect="Fill"
+                           Grid.Column="0"/>
+
+                    <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="CVV"
+                           HorizontalOptions="Start"      
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           FontSize="Medium"/>
+                </Grid>
+            </Frame>
+        </VerticalStackLayout>
+
+        <Button Grid.Row="11" Text="Save" TextColor="White" FontSize="Medium" BackgroundColor="{StaticResource orangeColor}" Margin="10"/>
+    </Grid>
+
+</ContentPage>

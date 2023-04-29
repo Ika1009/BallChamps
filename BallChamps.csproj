@@ -53,33 +53,44 @@
 	  <None Remove="Resources\Images\HomeImg1.png" />
 	  <None Remove="Resources\Images\HomeImg2.png" />
 	  <None Remove="Resources\Images\HomeImg3.png" />
+	  <None Remove="Resources\Images\iconAboutUs.png" />
 	  <None Remove="Resources\Images\iconAdd.png" />
 	  <None Remove="Resources\Images\iconAge.png" />
+	  <None Remove="Resources\Images\iconBackOrange.png" />
+	  <None Remove="Resources\Images\iconCalender.png" />
+	  <None Remove="Resources\Images\iconCard.png" />
 	  <None Remove="Resources\Images\iconCity.png" />
 	  <None Remove="Resources\Images\iconClock.png" />
+	  <None Remove="Resources\Images\iconCVV.png" />
+	  <None Remove="Resources\Images\iconDecline.png" />
 	  <None Remove="Resources\Images\iconDelete.png" />
 	  <None Remove="Resources\Images\iconDirection.png" />
 	  <None Remove="Resources\Images\iconEdit.png" />
 	  <None Remove="Resources\Images\iconEditImg.png" />
 	  <None Remove="Resources\Images\iconEmail.png" />
+	  <None Remove="Resources\Images\iconGame.png" />
 	  <None Remove="Resources\Images\iconGrayStar.png" />
 	  <None Remove="Resources\Images\iconGreenArrow.png" />
 	  <None Remove="Resources\Images\iconGreenUser.png" />
 	  <None Remove="Resources\Images\iconHalfYellowStar.png" />
 	  <None Remove="Resources\Images\iconHeight.png" />
+	  <None Remove="Resources\Images\iconHelp.png" />
 	  <None Remove="Resources\Images\iconHouseNo.png" />
 	  <None Remove="Resources\Images\iconLandMark.png" />
 	  <None Remove="Resources\Images\iconMoreInfo.png" />
+	  <None Remove="Resources\Images\iconNotification.png" />
 	  <None Remove="Resources\Images\iconOrangeCamera.png" />
 	  <None Remove="Resources\Images\iconOrangeUser.png" />
 	  <None Remove="Resources\Images\iconPassword.png" />
 	  <None Remove="Resources\Images\iconPhone.png" />
 	  <None Remove="Resources\Images\iconPincode.png" />
 	  <None Remove="Resources\Images\iconPosition.png" />
+	  <None Remove="Resources\Images\iconPrivacy.png" />
 	  <None Remove="Resources\Images\iconSend.png" />
 	  <None Remove="Resources\Images\iconSkill.png" />
 	  <None Remove="Resources\Images\iconState.png" />
 	  <None Remove="Resources\Images\iconStyleofPlay.png" />
+	  <None Remove="Resources\Images\iconSuccess.png" />
 	  <None Remove="Resources\Images\iconWaitingList.png" />
 	  <None Remove="Resources\Images\iconYellowStar.png" />
 	  <None Remove="Resources\Images\logo.svg" />
@@ -104,16 +115,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\AddNewCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ConversationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\CourtsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\DeclinedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\EditProfilePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ForgotPasswordPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\GamePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\HomePage.xaml">
@@ -146,10 +166,16 @@
 	  <MauiXaml Update="View\SelectAddressPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ShopPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\SignUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SuccessfulPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ViewProfilePage.xaml">

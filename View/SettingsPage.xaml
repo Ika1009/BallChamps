@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.SettingsPage"
+             Title="SettingsPage"
+             BackgroundColor="White">
+    <StackLayout Margin="0,10,0,10" Padding="0">
+        <Grid Padding="0,5,0,5" Margin="0,10,0,10" BackgroundColor="{StaticResource lightGrayColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="iconnotification.png" WidthRequest="30" HeightRequest="30" Margin="10,10,15,10" Grid.Column="0"/>
+            <Label Text="Notifications" Margin="10" TextColor="Black" FontSize="Small" VerticalOptions="Start" Grid.Column="1"/>
+            <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
+        </Grid>
+
+        <Grid Padding="0,5,0,5" Margin="0,10,0,10" BackgroundColor="{StaticResource lightGrayColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="iconprivacy.png" WidthRequest="30" HeightRequest="30" Margin="10,10,15,10" Grid.Column="0"/>
+            <Label Text="Privacy" Margin="10" TextColor="Black" FontSize="Small" VerticalOptions="Start" Grid.Column="1"/>
+            <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
+        </Grid>
+
+        <Grid Padding="0,5,0,5" Margin="0,10,0,10" BackgroundColor="{StaticResource lightGrayColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="icongreenuser.png" WidthRequest="30" HeightRequest="30" Margin="10,10,15,10" Grid.Column="0"/>
+            <Label Text="Account" Margin="10" TextColor="Black" FontSize="Small" VerticalOptions="Start" Grid.Column="1"/>
+            <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
+        </Grid>
+
+        <Grid Padding="0,5,0,5" Margin="0,10,0,10" BackgroundColor="{StaticResource lightGrayColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="iconaboutus.png" WidthRequest="30" HeightRequest="30" Margin="10,10,15,10" Grid.Column="0"/>
+            <Label Text="About Us" Margin="10" TextColor="Black" FontSize="Small" VerticalOptions="Start" Grid.Column="1"/>
+            <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
+        </Grid>
+
+        <Grid Padding="0,5,0,5" Margin="0,10,0,10" BackgroundColor="{StaticResource lightGrayColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="iconhelp.png" WidthRequest="30" HeightRequest="30" Margin="10,10,15,10" Grid.Column="0"/>
+            <Label Text="Help" Margin="10" TextColor="Black" FontSize="Small" VerticalOptions="Start" Grid.Column="1"/>
+            <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
