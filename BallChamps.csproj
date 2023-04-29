@@ -69,6 +69,7 @@
 	  <None Remove="Resources\Images\iconEditImg.png" />
 	  <None Remove="Resources\Images\iconEmail.png" />
 	  <None Remove="Resources\Images\iconGame.png" />
+	  <None Remove="Resources\Images\iconGrayCircle.png" />
 	  <None Remove="Resources\Images\iconGrayStar.png" />
 	  <None Remove="Resources\Images\iconGreenArrow.png" />
 	  <None Remove="Resources\Images\iconGreenUser.png" />
@@ -79,7 +80,9 @@
 	  <None Remove="Resources\Images\iconLandMark.png" />
 	  <None Remove="Resources\Images\iconMoreInfo.png" />
 	  <None Remove="Resources\Images\iconNotification.png" />
+	  <None Remove="Resources\Images\iconOrangeAddButton.png" />
 	  <None Remove="Resources\Images\iconOrangeCamera.png" />
+	  <None Remove="Resources\Images\iconOrangeCircle.png" />
 	  <None Remove="Resources\Images\iconOrangeUser.png" />
 	  <None Remove="Resources\Images\iconPassword.png" />
 	  <None Remove="Resources\Images\iconPhone.png" />
@@ -118,6 +121,9 @@
 	  <MauiXaml Update="View\AddNewCardPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CartPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\ConversationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -152,6 +158,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\PlayerDitailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ProductDetailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\ProductsPage.xaml">

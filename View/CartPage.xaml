@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.CartPage"
+             Title="CartPage"
+             BackgroundColor="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Padding="15,5,15,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <HorizontalStackLayout Grid.Row="0">
+                <Label Text="Deliver to" TextColor="Black" Margin="0,0,5,0" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="17"/>
+                <Label Text="James V. Simpson" TextColor="{StaticResource orangeColor}"  CharacterSpacing="0.2" FontAttributes="Bold" FontSize="17"/>
+            </HorizontalStackLayout>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Padding="0">
+                    <Label Text="531 Elk Creek Road, Smyrna," TextColor="{StaticResource grayColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="10"/>
+                    <Label Text="GA 30080" TextColor="{StaticResource grayColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="10"/>
+                </StackLayout>
+
+                <Button  Text="Change Address" TextColor="White" Grid.Column="1" FontSize="12" Padding="5,0,7,0" HeightRequest="30" HorizontalOptions="End" FontAttributes="Bold" BackgroundColor="{StaticResource greenColor}"/>
+            </Grid>
+        </Grid>
+
+        <BoxView BackgroundColor="{StaticResource grayColor}" Grid.Row="1"/>
+
+
+        <ScrollView Grid.Row="2">
+            <VerticalStackLayout Padding="15">
+                <Frame Margin="0,0,0,10" BackgroundColor="Transparent" Padding="8" BorderColor="{StaticResource lightGrayColor}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="productimg1.png" WidthRequest="70" Margin="0,0,10,0"/>
+
+                        <StackLayout Grid.Column="1" VerticalOptions="Start">
+                            <Label Text="Sport T-Shirt 1" TextColor="Black" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="15"/>
+                            <Label Text="$73" TextColor="{StaticResource orangeColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="15"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="2">
+                            <ImageButton Source="icondelete.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Start" HorizontalOptions="End" Margin="0,0,0,30"/>
+                            <ImageButton Source="iconorangeaddbutton.png" WidthRequest="80" VerticalOptions="End" HorizontalOptions="End"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame Margin="0,0,0,10" BackgroundColor="Transparent" Padding="8" BorderColor="{StaticResource lightGrayColor}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="productimg2.png"  WidthRequest="70" Margin="0,0,10,0"/>
+
+                        <StackLayout Grid.Column="1" VerticalOptions="Start">
+                            <Label Text="Sport T-Shirt 2" TextColor="Black" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="15"/>
+                            <Label Text="$42" TextColor="{StaticResource orangeColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="15"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="2">
+                            <ImageButton Source="icondelete.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Start" HorizontalOptions="End" Margin="0,0,0,30"/>
+                            <ImageButton Source="iconorangeaddbutton.png" WidthRequest="80" VerticalOptions="End" HorizontalOptions="End"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+                <Frame Margin="0,0,0,10" BackgroundColor="Transparent" Padding="8" BorderColor="{StaticResource lightGrayColor}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="productimg4.png"  WidthRequest="70" Margin="0,0,10,0"/>
+
+                        <StackLayout Grid.Column="1" VerticalOptions="Start">
+                            <Label Text="Sky Modern BasketBall Shoes" TextColor="Black" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="15"/>
+                            <Label Text="$31" TextColor="{StaticResource orangeColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="15"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="2">
+                            <ImageButton Source="icondelete.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Start" HorizontalOptions="End" Margin="0,0,0,30"/>
+                            <ImageButton Source="iconorangeaddbutton.png" WidthRequest="80" VerticalOptions="End" HorizontalOptions="End"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <VerticalStackLayout Padding="15" BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="3">
+            <Label Text="PRICE DETAILS" TextColor="Black" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="15"/>
+
+            <BoxView Margin="0,5,0,5" HeightRequest="1" BackgroundColor="{StaticResource grayColor}"/>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Price (4 item)" Grid.Column="0" TextColor="Black" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="13"/>
+                <Label Text="$261.00" Grid.Column="1" TextColor="Black" HorizontalOptions="End" CharacterSpacing="0.2" FontSize="13"/>
+            </Grid>
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Delievery Fee" Grid.Column="0" TextColor="Black" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="13"/>
+                <Label Text="Free" Grid.Column="1" TextColor="{StaticResource orangeColor}" HorizontalOptions="End" CharacterSpacing="0.2" FontSize="13"/>
+            </Grid>
+
+
+            <BoxView Margin="0,5,0,5" HeightRequest="1" BackgroundColor="{StaticResource grayColor}"/>
+
+
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Total Amount" Grid.Column="0" TextColor="Black" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="13"/>
+                <Label Text="$261.00" Grid.Column="1" TextColor="Black"  HorizontalOptions="End" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="13"/>
+            </Grid>
+        </VerticalStackLayout>
+
+
+        <Button  Text="Place Order" TextColor="White" Padding="15" Grid.Row="4" FontSize="20" FontAttributes="Bold" BackgroundColor="{StaticResource orangeColor}" Margin="10"/>
+
+    </Grid>
+</ContentPage>
