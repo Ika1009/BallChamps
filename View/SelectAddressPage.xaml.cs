@@ -9,10 +9,10 @@ public partial class SelectAddressPage : ContentPage
 
     private async void Add_Address_Button_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new AddNewAddressPage());
+        await Navigation.PushAsync(new AddNewAddressPage());
     }
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushModalAsync(new PaymentPage());
+        await Navigation.PushAsync(new PaymentPage());
     }
 }

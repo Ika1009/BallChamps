@@ -8,7 +8,6 @@ public partial class AddNewAddressPage : ContentPage
 	}
     private async void Button_Clicked(object sender, EventArgs e)
     {
-        // Save clicked
         await Navigation.PopAsync();
     }
 }

@@ -35,7 +35,7 @@
                     <Label Text="GA 30080" TextColor="{StaticResource grayColor}" CharacterSpacing="0.2" FontAttributes="Bold" FontSize="10"/>
                 </StackLayout>
 
-                <Button  Text="Change Address" TextColor="White" Grid.Column="1" FontSize="12" Padding="5,0,7,0" HeightRequest="30" HorizontalOptions="End" FontAttributes="Bold" BackgroundColor="{StaticResource greenColor}"/>
+                <Button  Text="Change Address" TextColor="White" Grid.Column="1" FontSize="12" Padding="5,0,7,0" HeightRequest="30" HorizontalOptions="End" FontAttributes="Bold" Clicked="Button_Clicked_1" BackgroundColor="{StaticResource greenColor}"/>
             </Grid>
         </Grid>
 
@@ -155,7 +155,7 @@
         </VerticalStackLayout>
 
 
-        <Button  Text="Place Order" TextColor="White" Padding="15" Grid.Row="4" FontSize="20" FontAttributes="Bold" BackgroundColor="{StaticResource orangeColor}" Margin="10"/>
+        <Button  Text="Place Order" TextColor="White" Padding="15" Grid.Row="4" FontSize="20" FontAttributes="Bold" BackgroundColor="{StaticResource orangeColor}" Clicked="Button_Clicked"  Margin="10"/>
 
     </Grid>
 </ContentPage>
