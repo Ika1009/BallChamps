@@ -6,10 +6,19 @@
     <StackLayout>
         <Image Source="homeimg1.png" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
         <Label Text="John Doe" TextColor="Black" HorizontalOptions="Center" FontSize="Large" Margin="10,0,10,10" />
-        <!--<Grid BackgroundColor="Red" Margin="25">
+        
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Image Source="iconyellowstar.png" WidthRequest="13"/>
+            <Image Source="iconyellowstar.png" WidthRequest="13" Margin="6,0,6,0"/>
+            <Image Source="iconyellowstar.png" WidthRequest="13"/>
+            <Image Source="iconyellowstar.png" WidthRequest="13" Margin="6,0,6,0"/>
+            <Image Source="iconhalfyellowstar.png" WidthRequest="13"/>
+        </HorizontalStackLayout>
+        
+        <Grid  Margin="25,25,25,0" Padding="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -18,29 +27,72 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand">
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" WidthRequest="70" Grid.Column="0" HorizontalOptions="CenterAndExpand">
                 <Label  HorizontalOptions="Center" Text="26" TextColor="{StaticResource greenColor}" FontSize="Medium"/>
                 <Label Text="Rank" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
             </StackLayout>
 
-            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand">
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" Grid.Column="1" WidthRequest="70" HorizontalOptions="CenterAndExpand">
                 <Label Text=".504"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
                 <Label Text="Win%" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
             </StackLayout>
 
-            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand">
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" Grid.Column="2" WidthRequest="70" HorizontalOptions="CenterAndExpand">
                 <Label Text="PG"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
                 <Label Text="Pos." HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
             </StackLayout>
-            
-            <StackLayout BackgroundColor="{StaticResource grayColor}" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" Grid.Column="3" WidthRequest="70" HorizontalOptions="CenterAndExpand">
                 <Label Text="5'9"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
                 <Label Text="Height" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
             </StackLayout>
-        </Grid>-->
+        </Grid>
 
+        <Grid  Margin="25,10,25,0" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-    <Button Text="Follow" FontSize="Micro" Margin="25" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White"/>
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" WidthRequest="160" Grid.Column="0" HorizontalOptions="CenterAndExpand">
+                <Label  HorizontalOptions="Center" Text="Chris Paul" TextColor="{StaticResource greenColor}" FontSize="Medium"/>
+                <Label Text="Style of Play" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
+            </StackLayout>
+
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" Grid.Column="1" WidthRequest="160" HorizontalOptions="CenterAndExpand">
+                <Label Text="Shooter"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
+                <Label Text="Skill One" HorizontalOptions="Center" TextColor="Black" FontSize="Small" />
+            </StackLayout>
+
+        </Grid>
+
+        <Grid  Margin="25,10,25,25" Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" WidthRequest="160" Grid.Column="0" HorizontalOptions="CenterAndExpand">
+                <Label  HorizontalOptions="Center" Text="Defence" TextColor="{StaticResource greenColor}" FontSize="Medium"/>
+                <Label Text="Skill Two" HorizontalOptions="Center" TextColor="Black" FontSize="Micro" />
+            </StackLayout>
+
+            <StackLayout BackgroundColor="{StaticResource lightGrayColor}" Grid.Row="0" Grid.Column="1" WidthRequest="160" HorizontalOptions="CenterAndExpand">
+                <Label Text="Assist Man"  HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" />
+                <Label Text="Skill three" HorizontalOptions="Center" TextColor="Black" FontSize="Small" />
+            </StackLayout>
+
+        </Grid>
+
+        <Button Text="Follow" FontSize="Micro" Margin="25" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White"/>
 
     </StackLayout>
 </ContentPage>
