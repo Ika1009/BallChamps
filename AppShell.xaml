@@ -58,7 +58,7 @@
                     ContentTemplate="{DataTemplate views:HomePage}" />
     <ShellContent Title="About Us"
                     Icon="icon_orange_about_us.png"
-                    ContentTemplate="{DataTemplate views:HomePage}" />
+                    ContentTemplate="{DataTemplate views:AboutUsPage}" />
     <MenuItem Text="Log Out"
               x:Name="logOutItem"
         IconImageSource="icon_orange_logout.png" />

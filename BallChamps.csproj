@@ -50,6 +50,10 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\AboutUsImg2.png" />
+	  <None Remove="Resources\Images\about_us_img1.png" />
+	  <None Remove="Resources\Images\about_us_img2.png" />
+	  <None Remove="Resources\Images\about_us_img3.png" />
+	  <None Remove="Resources\Images\about_us_img4.png" />
 	  <None Remove="Resources\Images\HomeImg1.png" />
 	  <None Remove="Resources\Images\HomeImg2.png" />
 	  <None Remove="Resources\Images\HomeImg3.png" />
@@ -97,6 +101,7 @@
 	  <None Remove="Resources\Images\iconYellowStar.png" />
 	  <None Remove="Resources\Images\icon_orange_add_button.png" />
 	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\map.png" />
 	  <None Remove="Resources\Images\ProductImg1.png" />
 	  <None Remove="Resources\Images\ProductImg2.png" />
 	  <None Remove="Resources\Images\ProductImg3.png" />
@@ -115,9 +120,21 @@
 	  <MauiImage Include="Resources\AppIcon\icon_tab_profile.png" />
 	  <MauiImage Include="Resources\AppIcon\icon_tab_rank.png" />
 	  <MauiImage Include="Resources\AppIcon\icon_tab_shop.png" />
+		
+	<MauiImage Include="Resources\AppIcon\icon_orange_about_us.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_card.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_court.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_home.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_inbox.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_logout.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_setting.png" />
+
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\AboutUsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\AddNewCardPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

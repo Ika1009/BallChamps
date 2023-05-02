@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.AboutUsPage"
+             Title="About Us"
+             BackgroundImageSource="background.png">
+    <StackLayout>
+        <Image Source="map.png" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+        <StackLayout BackgroundColor="Transparent" Padding="20">
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <Image Source="about_us_img1.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+                <Label Text="Ballchamp" TextColor="White" FontSize="Medium" VerticalOptions="Center" Margin="10,0,0,0" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <Image Source="about_us_img2.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+                <Label Text="Your location, Your place, USA" TextColor="White" FontSize="Medium" VerticalOptions="Center" Margin="10,0,0,0" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <Image Source="about_us_img3.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+                <Label Text="ballchamp@gmail.com" TextColor="White" FontSize="Medium" VerticalOptions="Center" Margin="10,0,0,0" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <Image Source="about_us_img4.png" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" />
+                <Label Text="+01 123-123-1234" TextColor="White" FontSize="Medium" VerticalOptions="Center" Margin="10,0,0,0" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
