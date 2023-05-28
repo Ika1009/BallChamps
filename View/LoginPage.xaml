@@ -47,7 +47,7 @@
                        Aspect="Fill"
                        Margin="0,2,5,2"/>
 
-                <Entry PlaceholderColor="White" Placeholder="Username"
+                <Entry PlaceholderColor="White" Placeholder="Username" x:Name="usernameEntry"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
                HeightRequest="40"/>
@@ -68,7 +68,7 @@
                        Aspect="Fill"
                        Margin="0,2,5,2"/>
 
-                <Entry PlaceholderColor="White" Placeholder="Password"
+                <Entry PlaceholderColor="White" Placeholder="Password" x:Name="passwordEntry"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
                HeightRequest="40"/>
