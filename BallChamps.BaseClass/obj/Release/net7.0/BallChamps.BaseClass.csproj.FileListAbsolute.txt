@@ -1,0 +1,12 @@
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\bin\Release\net7.0\BallChamps.BaseClass.deps.json
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\bin\Release\net7.0\BallChamps.BaseClass.dll
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\bin\Release\net7.0\BallChamps.BaseClass.pdb
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\BallChamps.BaseClass.csproj.AssemblyReference.cache
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\BallChamps.BaseClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\BallChamps.BaseClass.AssemblyInfoInputs.cache
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\BallChamps.BaseClass.AssemblyInfo.cs
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\BallChamps.BaseClass.csproj.CoreCompileInputs.cache
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\BallChamps.BaseClass.dll
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\refint\BallChamps.BaseClass.dll
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\BallChamps.BaseClass.pdb
+C:\Users\erick\source\repos\BallChamps\BallChamps.BaseClass\obj\Release\net7.0\ref\BallChamps.BaseClass.dll

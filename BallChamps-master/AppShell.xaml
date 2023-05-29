@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BallChamps.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:BallChamps.View"
+    FlyoutBackgroundImage="background.png"
+    FlyoutBackgroundImageAspect="AspectFill"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent Title="Intro"
+                Route="Intro"
+                ContentTemplate="{DataTemplate views:IntroPage}" FlyoutItemIsVisible="False"/>
+
+    <ShellContent Title="Sign Up"
+                Route="SignUp"
+                ContentTemplate="{DataTemplate views:SignUpPage}" FlyoutItemIsVisible="False"/>
+
+    <ShellContent Title="Login"
+                Route="Login"
+                ContentTemplate="{DataTemplate views:LoginPage}" FlyoutItemIsVisible="False"/>
+
+    <ShellContent Title="Forgot Password"
+                Route="ForgotPassword"
+                ContentTemplate="{DataTemplate views:ForgotPasswordPage}" FlyoutItemIsVisible="False"/>
+
+    <FlyoutItem Title="Home" Icon="icon_orange_home.png" Route="Home">
+        <ShellContent Title="Home" 
+                      Route="HomePage"
+                     Icon="icon_tab_home.png"
+                     ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent Title="Profile"
+                     Icon="icon_tab_profile.png"
+                     ContentTemplate="{DataTemplate views:ProfilePage}" />
+        <ShellContent Title="Courts"
+                      Icon="icon_tab_courts.png"
+                     ContentTemplate="{DataTemplate views:CourtsPage}" />
+        <ShellContent Title="Rank"
+                      Icon="icon_tab_rank.png"
+                     ContentTemplate="{DataTemplate views:RankPage}" />
+        <ShellContent Title="Shopping"
+                      Icon="icon_tab_shop.png"
+                     ContentTemplate="{DataTemplate views:ShopPage}" />
+        <ShellContent Title="Settings"
+                    Icon="icon_orange_setting.png"
+                    ContentTemplate="{DataTemplate views:SettingsPage}"  />
+    </FlyoutItem>
+
+    <ShellContent Title="Game"
+                     Icon="icon_orange_court.png"
+                     ContentTemplate="{DataTemplate views:CourtsPage}"/>
+
+    <ShellContent Title="My Cards"
+                         Icon="icon_orange_card.png"
+                         ContentTemplate="{DataTemplate views:HomePage}" />
+    <ShellContent Title="Inbox"
+                     Icon="icon_orange_inbox.png"
+                     ContentTemplate="{DataTemplate views:InboxPage}" />
+   
+    <ShellContent Title="About Us"
+                    Icon="icon_orange_about_us.png"
+                    ContentTemplate="{DataTemplate views:AboutUsPage}" />
+    <MenuItem Text="Log Out"
+              x:Name="logOutItem"
+        IconImageSource="icon_orange_logout.png" />
+    
+        <Shell.FlyoutHeader>
+            <Image Source="flyout_header.png"></Image>
+        </Shell.FlyoutHeader>
+    
+</Shell>

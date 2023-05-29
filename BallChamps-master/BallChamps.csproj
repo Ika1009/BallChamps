@@ -1,0 +1,223 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0-android;net7.0-maccatalyst;net7.0-ios</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>BallChamps</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>BallChamps</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.ballchamps</ApplicationId>
+		<ApplicationIdGuid>260097cb-287a-4f0c-bca8-db6df9af0380</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#f34d01" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.png" Color="#f34d01" BaseSize="1200,1000" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\AboutUsImg2.png" />
+	  <None Remove="Resources\Images\about_us_img1.png" />
+	  <None Remove="Resources\Images\about_us_img2.png" />
+	  <None Remove="Resources\Images\about_us_img3.png" />
+	  <None Remove="Resources\Images\about_us_img4.png" />
+	  <None Remove="Resources\Images\HomeImg1.png" />
+	  <None Remove="Resources\Images\HomeImg2.png" />
+	  <None Remove="Resources\Images\HomeImg3.png" />
+	  <None Remove="Resources\Images\iconAboutUs.png" />
+	  <None Remove="Resources\Images\iconAdd.png" />
+	  <None Remove="Resources\Images\iconAge.png" />
+	  <None Remove="Resources\Images\iconBackOrange.png" />
+	  <None Remove="Resources\Images\iconCalender.png" />
+	  <None Remove="Resources\Images\iconCard.png" />
+	  <None Remove="Resources\Images\iconCity.png" />
+	  <None Remove="Resources\Images\iconClock.png" />
+	  <None Remove="Resources\Images\iconCVV.png" />
+	  <None Remove="Resources\Images\iconDecline.png" />
+	  <None Remove="Resources\Images\iconDelete.png" />
+	  <None Remove="Resources\Images\iconDirection.png" />
+	  <None Remove="Resources\Images\iconEdit.png" />
+	  <None Remove="Resources\Images\iconEditImg.png" />
+	  <None Remove="Resources\Images\iconEmail.png" />
+	  <None Remove="Resources\Images\iconGame.png" />
+	  <None Remove="Resources\Images\iconGrayCircle.png" />
+	  <None Remove="Resources\Images\iconGrayStar.png" />
+	  <None Remove="Resources\Images\iconGreenArrow.png" />
+	  <None Remove="Resources\Images\iconGreenUser.png" />
+	  <None Remove="Resources\Images\iconHalfYellowStar.png" />
+	  <None Remove="Resources\Images\iconHeight.png" />
+	  <None Remove="Resources\Images\iconHelp.png" />
+	  <None Remove="Resources\Images\iconHouseNo.png" />
+	  <None Remove="Resources\Images\iconLandMark.png" />
+	  <None Remove="Resources\Images\iconMoreInfo.png" />
+	  <None Remove="Resources\Images\iconNotification.png" />
+	  <None Remove="Resources\Images\iconOrangeCamera.png" />
+	  <None Remove="Resources\Images\iconOrangeCircle.png" />
+	  <None Remove="Resources\Images\iconOrangeUser.png" />
+	  <None Remove="Resources\Images\iconPassword.png" />
+	  <None Remove="Resources\Images\iconPhone.png" />
+	  <None Remove="Resources\Images\iconPincode.png" />
+	  <None Remove="Resources\Images\iconPosition.png" />
+	  <None Remove="Resources\Images\iconPrivacy.png" />
+	  <None Remove="Resources\Images\iconSend.png" />
+	  <None Remove="Resources\Images\iconSkill.png" />
+	  <None Remove="Resources\Images\iconState.png" />
+	  <None Remove="Resources\Images\iconStyleofPlay.png" />
+	  <None Remove="Resources\Images\iconSuccess.png" />
+	  <None Remove="Resources\Images\iconWaitingList.png" />
+	  <None Remove="Resources\Images\iconYellowStar.png" />
+	  <None Remove="Resources\Images\icon_orange_add_button.png" />
+	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\map.png" />
+	  <None Remove="Resources\Images\ProductImg1.png" />
+	  <None Remove="Resources\Images\ProductImg2.png" />
+	  <None Remove="Resources\Images\ProductImg3.png" />
+	  <None Remove="Resources\Images\ProductImg4.png" />
+	  <None Remove="Resources\Images\ProductImg5.png" />
+	  <None Remove="Resources\Images\ProductImg6.png" />
+	  <None Remove="Resources\Images\ProductPriceBackicon.png" />
+	  <None Remove="Resources\Images\ShopImg1.png" />
+	  <None Remove="Resources\Images\ShopImg2.png" />
+	  <None Remove="Resources\Images\ShopImg3.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\AppIcon\icon_tab_courts.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_home.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_profile.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_rank.png" />
+	  <MauiImage Include="Resources\AppIcon\icon_tab_shop.png" />
+		
+	<MauiImage Include="Resources\AppIcon\icon_orange_about_us.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_card.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_court.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_home.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_inbox.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_logout.png" />
+	<MauiImage Include="Resources\AppIcon\icon_orange_setting.png" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\BallChamps.BaseClass\BallChamps.BaseClass.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\AboutUsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\AddNewCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\CartPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ConversationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\CourtsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\DeclinedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\EditProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ForgotPasswordPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\InboxPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\IntroPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\PaymentPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\PlayerDitailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ProductDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ProductsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\RankPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SelectAddressPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ShopPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SignUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\SuccessfulPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ViewProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\WaitingListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

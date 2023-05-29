@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BallChamps.View.RankPage"
+             xmlns:viewModels="clr-namespace:BallChamps.ViewModels"
+             BackgroundColor="White"
+             BackgroundImageSource="background.png">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
+                <!--<Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Frame.GestureRecognizers>-->
+                <Grid Padding="10" Margin="0,5,0,10" Grid.Row="1" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
+                    <StackLayout Grid.Column="1" Margin="10,5,0,0" Padding="0,0,0,0">
+                        <Label Text="La Fitness1" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
+                        <HorizontalStackLayout>
+                            <Label Text="Rank: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text="13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
+
+                            <Label Text="Level: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start" Padding="10,0,0,0"/>
+                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <Label Text="Star Rating: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                            <Label Text="13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
+
+                        </HorizontalStackLayout>
+                    </StackLayout>
+
+                    <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
+                </Grid>
+            </Frame>
+
+         
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
