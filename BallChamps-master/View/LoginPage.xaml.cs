@@ -1,3 +1,5 @@
+using BallChamps.ViewModels;
+
 namespace BallChamps.View;
 
 public partial class LoginPage : ContentPage
@@ -6,6 +8,7 @@ public partial class LoginPage : ContentPage
     public LoginPage()
     {
         InitializeComponent();
+		BindingContext = new LoginPageViewModel();
     }
     async void LoginButton_Clicked(object sender, EventArgs e)
 	{

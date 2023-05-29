@@ -19,14 +19,12 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Label Text="10000" ></Label>
-        
         <!-- Logo in the upper half -->
         <Image Source="logo.png"
            Aspect="AspectFit"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" 
-               HeightRequest="1000"
+               HeightRequest="100"
                Margin="0"/>
 
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Margin="25">
@@ -49,7 +47,7 @@
                        Aspect="Fill"
                        Margin="0,2,5,2"/>
 
-                <Entry PlaceholderColor="White" Placeholder="Username"
+                <Entry PlaceholderColor="White" Placeholder="Username" x:Name="usernameEntry" Text="{Binding UserName}"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
                HeightRequest="40"/>
@@ -70,7 +68,7 @@
                        Aspect="Fill"
                        Margin="0,2,5,2"/>
 
-                <Entry PlaceholderColor="White" Placeholder="Password"
+                <Entry PlaceholderColor="White" Placeholder="Password" x:Name="passwordEntry" Text="{Binding Password}"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
                HeightRequest="40"/>
@@ -87,7 +85,7 @@
             <Label Text="Remember me?" FontSize="Small" VerticalOptions="Center" TextColor="Gray" />
         </StackLayout>
 
-        <Button Text="Login" BackgroundColor="{StaticResource orangeColor}" FontSize="Medium" TextColor="White" Grid.Row="5" Margin="10" Clicked="LoginButton_Clicked" />
+        <Button Text="Login" BackgroundColor="{StaticResource orangeColor}" Command="{Binding LoginCommand}" FontSize="Medium" TextColor="White" Grid.Row="5" Margin="10" />
 
         <Label Text="Forgot password?" TextColor="Gray" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" Grid.Row="6">
             <Label.GestureRecognizers>
@@ -98,9 +96,9 @@
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="7" Margin="35">
             <Label Text="Don't have an account? " TextColor="White" FontSize="Small" VerticalOptions="Center" />
             <Label Text=" Sign Up" TextColor="{StaticResource orangeColor}" FontSize="Small" VerticalOptions="Center">
-              <Label.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnSignUpClicked"/>
-              </Label.GestureRecognizers>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSignUpClicked"/>
+                </Label.GestureRecognizers>
             </Label>
         </StackLayout>
     </Grid>

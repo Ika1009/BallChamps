@@ -22,3 +22,15 @@ D:\doc\Downloads\BallChamps2\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.Ba
 D:\doc\Downloads\BallChamps2\BallChamps.BaseClass\obj\Debug\net7.0\refint\BallChamps.BaseClass.dll
 D:\doc\Downloads\BallChamps2\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.pdb
 D:\doc\Downloads\BallChamps2\BallChamps.BaseClass\obj\Debug\net7.0\ref\BallChamps.BaseClass.dll
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\bin\Debug\net7.0\BallChamps.BaseClass.deps.json
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\bin\Debug\net7.0\BallChamps.BaseClass.dll
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\bin\Debug\net7.0\BallChamps.BaseClass.pdb
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.csproj.AssemblyReference.cache
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.AssemblyInfoInputs.cache
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.AssemblyInfo.cs
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.csproj.CoreCompileInputs.cache
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.dll
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\refint\BallChamps.BaseClass.dll
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\BallChamps.BaseClass.pdb
+D:\Programiranje\C#\Ball Champs\BallChamps\BallChamps.BaseClass\obj\Debug\net7.0\ref\BallChamps.BaseClass.dll
