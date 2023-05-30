@@ -31,7 +31,7 @@ namespace BallChamps.Services
             else
                 throw new Exception( JsonSerializer.Deserialize<Dictionary<string, string>>(await response.Content.ReadAsStringAsync())["message"]);
         }
-        public static async Task<List<NewsFeed>> GetNewsFeed()
+        public static async Task<List<NewsFeed>> GetNewsFeedAsync()
         {
             var response = await httpClient.GetAsync(endpoint + "/NewsFeed/GetNewsFeeds");
             
@@ -44,7 +44,7 @@ namespace BallChamps.Services
             else
                 throw new Exception( JsonSerializer.Deserialize<Dictionary<string, string>>(await response.Content.ReadAsStringAsync())["message"]);
         }
-        public static async Task<List<Courts>> GetNewsFeed()
+        public static async Task<List<Courts>> GetCourtsAsync()
         {
             var response = await httpClient.GetAsync(endpoint + "/Court/GetCourts");
             
