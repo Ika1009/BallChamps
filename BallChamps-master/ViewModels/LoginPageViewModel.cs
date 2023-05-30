@@ -20,8 +20,6 @@ namespace BallChamps.ViewModels
         [ObservableProperty]
         private string _Email;
 
-        public User CurrentUser;
-
         public LoginPageViewModel()
         {
             LoginCommand = new Command(OnLoginCommand);
@@ -37,46 +35,26 @@ namespace BallChamps.ViewModels
             try
             {
                 IsBusy = true;
-                bool loggedin = await APIService.LoginAsync(UserName, Password);
-                if (loggedin)
+
+                User _userResult = await APIService.LoginAsync(UserName, Password);
+
+                if (_userResult.Token != null)
+                {
+                    //Set Current User Variables
+                    UserService.CurrentUser.Token = _userResult.Token;
+                    UserService.CurrentUser.ProfileId = _userResult.ProfileId;
+                    UserService.CurrentUser.UserId = _userResult.UserId;
+                    UserService.CurrentUser.AccessLevel = _userResult.AccessLevel;
+
                     await Shell.Current.GoToAsync("//Home/HomePage");
+                }
                 else
                     throw new Exception("Something went wrong");
             }
             catch (Exception ex) { await Shell.Current.DisplayAlert("Alert", ex.Message, "OK"); }
 
             IsBusy = false;
-
-
-            /*bool LoggedIn = false;
-
-            //Authenticate User
-            var _userResult = AuthenticateUser.AuthenticateUsers(_Email, UserName, Password);
-
-            if (_userResult.Result.Token != null)
-            {
-                LoggedIn = true;
-                //Set Current User Variables
-                CurrentUser.Token = _userResult.Result.Token;
-                CurrentUser.ProfileId = _userResult.Result.ProfileId;
-                CurrentUser.UserId = _userResult.Result.UserId;
-                CurrentUser.AccessLevel = _userResult.Result.AccessLevel;
-
-            }
-            else
-            {
-                LoggedIn = false;
-                IsBusy = false;
-                await Application.Current.MainPage.DisplayAlert("Alert", "Incorrect Email or Password", "Ok");
-                return;
-            }
-
-
-            if (LoggedIn)
-            {
-                IsBusy = false;
-                await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
-            }*/
+            return;
         }
 
             public async void OnGoToRegisterCommand()

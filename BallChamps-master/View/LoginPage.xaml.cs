@@ -1,11 +1,11 @@
+using BallChamps.Services;
 using BallChamps.ViewModels;
 
 namespace BallChamps.View;
 
 public partial class LoginPage : ContentPage
 {
-	//SignUpPage signUpPage; // use only one instance of signUpPage for optimization
-    public LoginPage()
+	public LoginPage()
     {
         InitializeComponent();
 		BindingContext = new LoginPageViewModel();
@@ -13,7 +13,6 @@ public partial class LoginPage : ContentPage
     async void LoginButton_Clicked(object sender, EventArgs e)
 	{
 		await Shell.Current.GoToAsync("//Home/HomePage");
-
     }
     async void OnSignUpClicked(object sender, EventArgs args)
 	{

@@ -1,4 +1,5 @@
-﻿using BallChamps.View;
+﻿using BallChamps.Services;
+using BallChamps.View;
 using BallChamps.ViewModels;
 
 namespace BallChamps;
@@ -16,15 +17,21 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		builder.Services.AddSingleton<HomePage>();
+        //Services
+        //builder.Services.AddSingleton<UserService>();
+        //ViewModels
+        //builder.Services.AddSingleton((sp) => new LoginPageViewModel(sp.GetRequiredService<UserService>()));
+
+        // Pages
+        builder.Services.AddSingleton<HomePage>();
         builder.Services.AddSingleton<HomePageViewModel>();
         builder.Services.AddSingleton<ProfilePage>();
         builder.Services.AddSingleton<ProfilePageViewModel>();
         builder.Services.AddSingleton<CourtsPage>();
         builder.Services.AddSingleton<CourtPageViewModel>();
-
         builder.Services.AddSingleton<CourtsPage>();
         builder.Services.AddSingleton<RankPage>();
+
         //builder.Services.AddSingleton<ShoppingPage>();
 
 
