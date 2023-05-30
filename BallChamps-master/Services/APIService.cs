@@ -12,7 +12,7 @@ namespace BallChamps.Services
     public static class APIService
     {
         private static readonly HttpClient httpClient = new();
-        const string endpoint = "https://ballchampswebapi.azurewebsites.net/api/";
+        const string endpoint = "https://ballchampswebapi.azurewebsites.net/api";
 
         public static async Task<User> LoginAsync(string email, string password)
         {
@@ -27,6 +27,19 @@ namespace BallChamps.Services
                 var responseString = await response.Content.ReadAsStringAsync();
                 return JsonSerializer.Deserialize<User>(responseString.ToString());
                 // JsonConvert.DeserializeObject<User>(responseString.ToString()); with the NewtonSoftJson
+            }
+            else
+                throw new Exception( JsonSerializer.Deserialize<Dictionary<string, string>>(await response.Content.ReadAsStringAsync())["message"]);
+        }
+        public static async Task<List<NewsFeed>> GetNewsFeed()
+        {
+            var response = await httpClient.GetAsync(endpoint + "/NewsFeed/GetNewsFeeds");
+            
+            if (response.IsSuccessStatusCode)
+            {
+                var responseString = await response.Content.ReadAsStringAsync();
+                return JsonSerializer.Deserialize<List<NewsFeed>>(responseString.ToString());
+                // JsonConvert.DeserializeObject<List<NewsFeed>>(responseString.ToString()); with the NewtonSoftJson
             }
             else
                 throw new Exception( JsonSerializer.Deserialize<Dictionary<string, string>>(await response.Content.ReadAsStringAsync())["message"]);
