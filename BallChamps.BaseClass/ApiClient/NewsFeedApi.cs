@@ -63,8 +63,6 @@ namespace ApiClient
         /// <returns></returns>
         public static async Task<List<NewsFeed>> GetNewsFeeds(string token)
         {
-           
-            List<NewsFeed> _court = new List<NewsFeed>();
             var clientBaseAddress = _api.Intial();
 
             using (var client = new HttpClient())
@@ -82,21 +80,17 @@ namespace ApiClient
 
 
                     if (response.IsSuccessStatusCode)
-                    {
-                        _court = JsonConvert.DeserializeObject<List<NewsFeed>>(responseString);
-
-                    }
+                        return JsonConvert.DeserializeObject<List<NewsFeed>>(responseString);
+                    else
+                        throw new Exception("Something went wrong!");
                 }
 
                 catch (Exception ex)
                 {
-                    var x = ex;
+                    return new List<NewsFeed>();
                 }
 
             }
-
-            return _court;
-
         }
 
         /// <summary>

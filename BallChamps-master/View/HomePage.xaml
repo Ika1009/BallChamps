@@ -11,10 +11,10 @@
         <viewModels:HomePageViewModel/>
     </ContentPage.BindingContext>-->
 
-    <ScrollView BackgroundColor="White">
+    <ScrollView BackgroundColor="Black">
 
         <VerticalStackLayout>
-
+            <Label x:Name="label1" Text="{Binding Title}"></Label>
             <Frame x:Name="MyFrame" Padding="12" BackgroundColor="White" Margin="10" BorderColor="{StaticResource lightGrayColor}" CornerRadius="10">
                 <CollectionView ItemsSource="{Binding NewsFeedCollection}">
                     <CollectionView.ItemTemplate>

@@ -1,60 +1,49 @@
-﻿
-using ApiClient;
+﻿using ApiClient;
 using BallChamps.Domain;
+using BallChamps.Services;
 using BallChampsBaseClass.Common;
-using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
 namespace BallChamps.ViewModels
 {
-    public partial class HomePageViewModel: BaseViewModel
+    public partial class HomePageViewModel : INotifyPropertyChanged
     {
-
-
-        [ObservableProperty]
-        ObservableCollection<NewsFeed> _newsFeedCollection;
-
-        [ObservableProperty]
+        private ObservableCollection<NewsFeed> _newsFeedCollection;
         private bool _isRefreshing;
-
-        [ObservableProperty]
         private NewsFeed _newsFeed;
-
-        [ObservableProperty]
         private NewsFeed _selectedNewsFeed;
 
         public ICommand SelectedNewsFeedCommand { get; }
         public ICommand LoadItemsCommand;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public HomePageViewModel()
         {
-            InitData();
-
             SelectedNewsFeedCommand = new Command(OnSelectedNewsFeedCommand);
-            
+            LoadItemsCommand = new Command(async () => await GetNewsFeedData());
+            LoadItemsCommand.Execute(null); // trigger the command on ViewModel construction
         }
 
-
-        public async void InitData()
+        public async Task GetNewsFeedData()
         {
+            IsRefreshing = true;
 
-            this.IsRefreshing = true;
-
-            var list = await NewsFeedApi.GetNewsFeeds(null);
+            var list = await NewsFeedApi.GetNewsFeeds(UserService.CurrentUser?.Token);
 
             NewsFeedCollection = new ObservableCollection<NewsFeed>(list);
-
-            this.IsRefreshing = false;
+            IsRefreshing = false;
         }
 
         public async void OnSelectedNewsFeedCommand()
         {
             try
             {
-                _newsFeed = _selectedNewsFeed;
-               // App.NavigationService.NavigateTo("SettingPage", _userProfile);
-
+                _newsFeed = SelectedNewsFeed;
+                // App.NavigationService.NavigateTo("SettingPage", _userProfile);
             }
             catch (Exception ex)
             {
@@ -69,10 +58,55 @@ namespace BallChamps.ViewModels
                 return LoadItemsCommand ?? (LoadItemsCommand = new Command(() =>
                 {
                     NewsFeedCollection.Clear();
-                    this.InitData();
+                    this.GetNewsFeedData();
                 }));
             }
         }
 
+        // Implement properties with RaisePropertyChanged
+
+        public ObservableCollection<NewsFeed> NewsFeedCollection
+        {
+            get => _newsFeedCollection;
+            set
+            {
+                if (_newsFeedCollection != value)
+                {
+                    _newsFeedCollection = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        public bool IsRefreshing
+        {
+            get => _isRefreshing;
+            set
+            {
+                if (_isRefreshing != value)
+                {
+                    _isRefreshing = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        public NewsFeed SelectedNewsFeed
+        {
+            get => _selectedNewsFeed;
+            set
+            {
+                if (_selectedNewsFeed != value)
+                {
+                    _selectedNewsFeed = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        protected void RaisePropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

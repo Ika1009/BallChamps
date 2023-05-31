@@ -31,20 +31,7 @@ namespace BallChamps.Services
             else
                 throw new Exception( JsonSerializer.Deserialize<Dictionary<string, string>>(await response.Content.ReadAsStringAsync())["message"]);
         }
-        public static async Task<List<NewsFeed>> GetNewsFeedAsync()
-        {
-            var response = await httpClient.GetAsync(endpoint + "/NewsFeed/GetNewsFeeds");
-            
-            if (response.IsSuccessStatusCode)
-            {
-                var responseString = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<List<NewsFeed>>(responseString.ToString());
-                // JsonConvert.DeserializeObject<List<NewsFeed>>(responseString.ToString()); with the NewtonSoftJson
-            }
-            else
-                throw new Exception( JsonSerializer.Deserialize<Dictionary<string, string>>(await response.Content.ReadAsStringAsync())["message"]);
-        }
-        public static async Task<List<Courts>> GetCourtsAsync()
+        public static async Task<List<Court>> GetCourtsAsync()
         {
             var response = await httpClient.GetAsync(endpoint + "/Court/GetCourts");
             

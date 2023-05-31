@@ -3,6 +3,7 @@
 using ApiClient;
 using BallChamps.Domain;
 using BallChamps.Models;
+using BallChamps.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 using System;
@@ -98,8 +99,8 @@ namespace BallChamps.ViewModels
 
             this.IsRefreshing = true;
 
-
-           SelectedProfile = await ProfileApi.GetProfileById("52c7c730-1770-46f7-842b-2a885f6c120a", null);
+            // SelectedProfile = await ProfileApi.GetProfileById("52c7c730-1770-46f7-842b-2a885f6c120a"UserService.CurrentUser.ProfileId, null);
+            SelectedProfile = await ProfileApi.GetProfileById(UserService.CurrentUser.ProfileId, UserService.CurrentUser.Token);
 
             Record = SelectedProfile.WinPercentage + "-" + SelectedProfile.Losses;
 
