@@ -38,10 +38,10 @@ namespace BallChamps.ViewModels
 
                 User _userResult = await APIService.LoginAsync(UserName, Password);
 
-                if (_userResult.Token != null)
+                if (_userResult != null)
                 {
                     //Set Current User Variables
-                    UserService.CurrentUser.Token = _userResult.Token;
+                    if (_userResult.Token != null) UserService.CurrentUser.Token = _userResult.Token; // the Token is null in the Database
                     UserService.CurrentUser.ProfileId = _userResult.ProfileId;
                     UserService.CurrentUser.UserId = _userResult.UserId;
                     UserService.CurrentUser.AccessLevel = _userResult.AccessLevel;
