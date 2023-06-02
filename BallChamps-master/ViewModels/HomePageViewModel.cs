@@ -32,7 +32,7 @@ namespace BallChamps.ViewModels
         {
             IsRefreshing = true;
 
-            var list = await NewsFeedApi.GetNewsFeeds(UserService.CurrentUser?.Token);
+            var list = await NewsFeedApi.GetNewsFeeds(UserService.CurrentUser.Token);
 
             NewsFeedCollection = new ObservableCollection<NewsFeed>(list);
             IsRefreshing = false;

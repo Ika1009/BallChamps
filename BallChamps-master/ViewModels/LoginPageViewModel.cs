@@ -42,6 +42,8 @@ namespace BallChamps.ViewModels
                 {
                     //Set Current User Variables
                     if (_userResult.Token != null) UserService.CurrentUser.Token = _userResult.Token; // the Token is null in the Database
+                    UserService.CurrentUser.Password = Password;
+                    UserService.CurrentUser.Email = UserName;
                     UserService.CurrentUser.ProfileId = _userResult.ProfileId;
                     UserService.CurrentUser.UserId = _userResult.UserId;
                     UserService.CurrentUser.AccessLevel = _userResult.AccessLevel;
