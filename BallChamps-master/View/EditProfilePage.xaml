@@ -44,7 +44,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Choose UserName"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Choose UserName" Text="{Binding Username}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
