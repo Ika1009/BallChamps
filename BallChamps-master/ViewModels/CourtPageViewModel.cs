@@ -50,10 +50,7 @@ namespace BallChamps.ViewModels
            
              var list = await CourtApi.GetCourts(UserService.CurrentUser.Token);
 
-
             CourtCollection = new ObservableCollection<Court>(list);
-
-            _courtCollection = CourtCollection;
 
             this.IsRefreshing = false;
         }

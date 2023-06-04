@@ -1,6 +1,7 @@
 ﻿
 using ApiClient;
 using BallChamps.Domain;
+using BallChamps.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
@@ -31,8 +32,6 @@ namespace BallChamps.ViewModels
         public ICommand SelectedProfileCommand { get; }
         public ICommand LoadItemsCommand;
 
-        
-
 
         public RankingPageViewModel()
         {
@@ -46,17 +45,11 @@ namespace BallChamps.ViewModels
       
         public async void InitData()
         {
-
-
             this.IsRefreshing = true;
 
-           
-             var list = await ProfileApi.GetProfiles(null);
+            var list = await ProfileApi.GetProfiles(UserService.CurrentUser.Token);
 
-
-           ProfileCollection = new ObservableCollection<Profile>(list);
-
-           _profileCollection = ProfileCollection;
+            ProfileCollection = new ObservableCollection<Profile>(list);
 
             this.IsRefreshing = false;
         }
