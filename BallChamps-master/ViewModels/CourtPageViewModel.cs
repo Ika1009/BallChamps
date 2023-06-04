@@ -60,11 +60,9 @@ namespace BallChamps.ViewModels
 
         public async void OnSelectedCourt(Court selectedCourt)
         {
-            await Shell.Current.DisplayAlert("ALe wrong!", "A", "OK");
-
             try
             {
-                await Shell.Current.Navigation.PushAsync(new ViewProfilePage());
+                await Shell.Current.Navigation.PushAsync(new ViewProfilePage(selectedCourt));
 
             }
             catch (Exception ex)

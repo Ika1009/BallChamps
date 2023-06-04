@@ -5,8 +5,8 @@
              BackgroundColor="White">
     <ScrollView>
         <StackLayout>
-            <Image Source="homeimg1.png" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
-            <Label Text="LA Fitness 1" TextColor="Black" HorizontalOptions="Center" FontSize="Title" Margin="10,0,10,10" />
+            <Image Source="{Binding ImagePath}" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+            <Label Text="{Binding CourtName}" TextColor="Black" HorizontalOptions="Center" FontSize="Title" Margin="10,0,10,10" />
             <Grid Margin="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -26,8 +26,8 @@
                 <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" HeightRequest="30" WidthRequest="1" VerticalOptions="FillAndExpand" />
                 
                 <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand">
-                    <Label Text="204" HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" FontAttributes="Bold"/>
-                    <Label Text="Ratings" HorizontalOptions="Center" TextColor="{StaticResource grayColor}" FontSize="Caption" FontAttributes="Bold"/>
+                    <Label Text="{Binding Rating}" HorizontalOptions="Center" TextColor="{StaticResource greenColor}" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label Text="Rating" HorizontalOptions="Center" TextColor="{StaticResource grayColor}" FontSize="Caption" FontAttributes="Bold"/>
                 </StackLayout>
 
             </Grid>
