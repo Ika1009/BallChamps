@@ -43,6 +43,7 @@ namespace BallChamps.ViewModels
             ChooseImageCommand = new Command(async () => await OnChooseImage());
             InitDataAsync();
         }
+
         public async Task InitDataAsync()
         {
             this.IsRefreshing = true;
@@ -59,6 +60,7 @@ namespace BallChamps.ViewModels
 
             this.IsRefreshing = false;
         }
+
         public ICommand ChooseImageCommand { get; }
         public ICommand SaveProfileCommand { get; }
 
