@@ -40,10 +40,10 @@ namespace BallChamps.ViewModels
 
         public EditProfilePageViewModel()
         {
-            InitData();
+            ChooseImageCommand = new Command(async () => await OnChooseImage());
+            InitDataAsync();
         }
-
-        public async Task InitData()
+        public async Task InitDataAsync()
         {
             this.IsRefreshing = true;
 
@@ -59,5 +59,59 @@ namespace BallChamps.ViewModels
 
             this.IsRefreshing = false;
         }
+        public ICommand ChooseImageCommand { get; }
+        public ICommand SaveProfileCommand { get; }
+
+
+        private ImageSource _profileImage;
+        public ImageSource ProfileImage
+        {
+            get { return _profileImage; }
+            set
+            {
+                _profileImage = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private async Task OnChooseImage()
+        {
+            var result = await FilePicker.PickAsync(new PickOptions
+            {
+                PickerTitle = "Please select an image",
+                FileTypes = FilePickerFileType.Images,
+            });
+
+            if (result != null)
+            {
+                var stream = await result.OpenReadAsync();
+                ProfileImage = ImageSource.FromStream(() => stream);
+            }
+        }
+
+        public async Task SaveProfile()
+        {
+            await ProfileApi.UpdateUserProfileById(new()
+            {
+                UserName = Username,
+                FirstName = FirstName,
+                LastName = LastName,
+                Age = Age,
+                StyleOfPlay = StyleOfPlay,
+                Position = Position,
+                SkillOne = SkillOne,
+                SkillTwo = SkillTwo
+
+            }, UserService.CurrentUser.Token);
+        }
+
     }
 }
+/*Username = profile.UserName;
+FirstName = profile.FirstName;
+LastName = profile.LastName;
+Age = profile.Age;
+StyleOfPlay = profile.StyleOfPlay;
+Position = profile.Position;
+SkillOne = profile.SkillOne;
+SkillTwo = profile.SkillTwo;*/

@@ -31,7 +31,7 @@ namespace BallChamps.ViewModels
         {
             if (string.IsNullOrEmpty(UserName)) { await Shell.Current.DisplayAlert("Alert", "You need to fill in the username", "OK"); return; }
             if (string.IsNullOrEmpty(Password)) { await Shell.Current.DisplayAlert("Alert", "You need to fill in the password", "OK"); return; }
-
+            if (IsBusy) return;
             try
             {
                 IsBusy = true;
