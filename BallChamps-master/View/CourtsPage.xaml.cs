@@ -1,3 +1,4 @@
+using BallChamps.Domain;
 using BallChamps.ViewModels;
 
 namespace BallChamps.View;
@@ -10,8 +11,11 @@ public partial class CourtsPage : ContentPage
         BindingContext = vm;
     }
 
-    private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+    private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
-		await Navigation.PushAsync(new ViewProfilePage(), true);
+        var court = ((sender as Frame)?.BindingContext as Court);
+        if (court == null) return;
+        var viewModel = this.BindingContext as CourtPageViewModel;
+        viewModel?.SelectedCourtCommand.Execute(court);
     }
 }

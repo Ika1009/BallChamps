@@ -6,149 +6,35 @@
              BackgroundImageSource="background.png">
     <ScrollView>
         <VerticalStackLayout>
-            <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Frame.GestureRecognizers>
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
+            <CollectionView ItemsSource="{Binding CourtCollection}" Margin="10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Padding="0">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Frame.GestureRecognizers>
+                            <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
 
-                    <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
-                    <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness1" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
-                        </HorizontalStackLayout>
-                    </StackLayout>
+                                <Image Source="{Binding ImagePath}" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
+                                <StackLayout Grid.Column="1" Margin="10">
+                                    <Label Text="{Binding CourtName}" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
+                                    <HorizontalStackLayout>
+                                        <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
+                                        <Label Text="{Binding ReserveCost}" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
+                                    </HorizontalStackLayout>
+                                </StackLayout>
 
-                    <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
-                </Grid>
-            </Frame>
-
-            <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Frame.GestureRecognizers>
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
-                    <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness2" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
-                        </HorizontalStackLayout>
-                    </StackLayout>
-
-                    <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
-                </Grid>
-            </Frame>
-
-            <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Frame.GestureRecognizers>
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
-                    <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness3" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
-                        </HorizontalStackLayout>
-                    </StackLayout>
-
-                    <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
-                </Grid>
-            </Frame>
-
-            <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Frame.GestureRecognizers>
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
-                    <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness4" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
-                        </HorizontalStackLayout>
-                    </StackLayout>
-
-                    <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
-                </Grid>
-            </Frame>
-
-            <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Frame.GestureRecognizers>
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Image Source="homeimg1.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
-                    <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness5" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
-                        </HorizontalStackLayout>
-                    </StackLayout>
-
-                    <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
-                </Grid>
-            </Frame>
-
-            <Frame BackgroundColor="White" BorderColor="{StaticResource lightGrayColor}" Margin="10" Padding="0">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                </Frame.GestureRecognizers>
-                <Grid Padding="10" Margin="0,10,0,10" Grid.Row="1" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Image Source="homeimg3.png" WidthRequest="55" HeightRequest="55" Grid.Column="0"/>
-                    <StackLayout Grid.Column="1" Margin="10">
-                        <Label Text="La Fitness6" TextColor="{StaticResource orangeColor}" FontSize="Body" VerticalOptions="Start"/>
-                        <HorizontalStackLayout>
-                            <Label Text="Waiting list: " TextColor="{StaticResource grayColor}" FontSize="13" VerticalOptions="Start"/>
-                            <Label Text=" 13" TextColor="Black" FontSize="13" VerticalOptions="Start"/>
-                        </HorizontalStackLayout>
-                    </StackLayout>
-
-                    <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
-                </Grid>
-            </Frame>
+                                <Image Source="icongreenarrow.png" WidthRequest="30" HeightRequest="30" Margin="10,10,5,10" Grid.Column="2"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

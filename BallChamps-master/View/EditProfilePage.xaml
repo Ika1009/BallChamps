@@ -68,7 +68,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="First Name"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="First Name" Text="{Binding FirstName}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
@@ -91,7 +91,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Last Name"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Last Name"  Text="{Binding LastName}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
@@ -114,7 +114,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Age"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Age" Text="{Binding Age}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
@@ -138,7 +138,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Height"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Height" Text="{Binding Height}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
@@ -161,7 +161,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Style of play"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Style of play" Text="{Binding StyleOfPlay}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
@@ -184,7 +184,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Position"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Position" Text="{Binding Position}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
@@ -207,7 +207,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Skill one"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Skill one" Text="{Binding SkillOne}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"
@@ -230,7 +230,7 @@
                             Aspect="Fill"
                            Grid.Column="0"/>
 
-                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Skill two"
+                        <Entry TextColor="Black" PlaceholderColor="{StaticResource Black}" Placeholder="Skill two" Text="{Binding SkillTwo}"
                            HorizontalOptions="Start"      
                            VerticalOptions="Center"
                            Grid.Column="1"

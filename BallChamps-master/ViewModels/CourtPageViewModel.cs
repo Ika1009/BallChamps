@@ -1,7 +1,11 @@
 ﻿
 using ApiClient;
 using BallChamps.Domain;
+using BallChamps.Services;
+using BallChamps.View;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -25,25 +29,18 @@ namespace BallChamps.ViewModels
         [ObservableProperty]
         private Court _court;
 
-        [ObservableProperty]
-        private Court _selectedCourt;
-
         public ICommand SelectedCourtCommand { get; }
         public ICommand LoadItemsCommand;
-
-        
-
 
         public CourtPageViewModel()
         {
             InitData();
+            SelectedCourtCommand = new Command<Court>(OnSelectedCourt);
 
-            SelectedCourtCommand = new Command(OnSelectedCourtCommand);
-            
         }
 
 
-      
+
         public async void InitData()
         {
 
@@ -51,7 +48,7 @@ namespace BallChamps.ViewModels
             this.IsRefreshing = true;
 
            
-             var list = await CourtApi.GetCourts(null);
+             var list = await CourtApi.GetCourts(UserService.CurrentUser.Token);
 
 
             CourtCollection = new ObservableCollection<Court>(list);
@@ -61,17 +58,18 @@ namespace BallChamps.ViewModels
             this.IsRefreshing = false;
         }
 
-        public async void OnSelectedCourtCommand()
+        public async void OnSelectedCourt(Court selectedCourt)
         {
+            await Shell.Current.DisplayAlert("ALe wrong!", "A", "OK");
+
             try
             {
-                _court = _selectedCourt;
-               
+                await Shell.Current.Navigation.PushAsync(new ViewProfilePage());
 
             }
             catch (Exception ex)
             {
-                throw ex;
+                await Shell.Current.DisplayAlert("Something went wrong!", ex.Message, "OK");
             }
         }
 
