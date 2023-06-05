@@ -5,36 +5,16 @@
              BackgroundColor="White">
     <ScrollView>
         <StackLayout>
-            <Grid>
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                </Grid.GestureRecognizers>
-            <Image Source="shopimg1.png" Scale="0.9" Aspect="AspectFill"/>
-
-            <Label Text="CLOTHING" CharacterSpacing="2.4" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
-
-            </Grid>
-
-            <Grid>
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                </Grid.GestureRecognizers>
-                <Image Source="shopimg2.png" Scale="0.9" Aspect="AspectFill"/>
-
-                <Label Text="SHOES" CharacterSpacing="2.4" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
-
-            </Grid>
-
-            <Grid >
-                <Grid.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                </Grid.GestureRecognizers>
-                <Image Source="shopimg3.png" Scale="0.9" Aspect="AspectFill"/>
-
-                <Label Text="ACCESSORIES" CharacterSpacing="2.4" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
-
-            </Grid>
+            <CollectionView ItemsSource="{Binding Products}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image Source="{Binding ImagePath}" Scale="0.9" Aspect="AspectFill"/>
+                            <Label Text="{Binding Name}" CharacterSpacing="2.4" TextColor="White" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Transparent"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
-
     </ScrollView>
 </ContentPage>

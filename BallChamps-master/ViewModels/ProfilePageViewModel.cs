@@ -70,15 +70,9 @@ namespace BallChamps.ViewModels
         private string _record;
     
 
-
-
-
-
-
         public ProfilePageViewModel()
         {
             InitData();
-
             
             SettingCommand = new Command(OnSettingCommand);
             EditProfileCommand = new Command(OnEditProfileCommand);
@@ -91,11 +85,26 @@ namespace BallChamps.ViewModels
             MenuCommand = new Command(OnMenuCommand);
         }
 
+        public ProfilePageViewModel(Profile profile)
+        {
+            SelectedProfile = profile;
+            Record = SelectedProfile.WinPercentage + "-" + SelectedProfile.Losses;
 
+
+            SettingCommand = new Command(OnSettingCommand);
+            EditProfileCommand = new Command(OnEditProfileCommand);
+            BackCommand = new Command(OnBackCommand);
+            UpdateProfileImageCommand = new Command(OnUpdateProfileImageCommand);
+            FollowsCommand = new Command(OnFollowsCommand);
+            FollowingCommand = new Command(OnFollowingCommand);
+            CommentsCommand = new Command(OnCommentsCommand);
+            GameHistoryCommand = new Command(OnGameHistoryCommand);
+            MenuCommand = new Command(OnMenuCommand);
+
+        }
       
         public async Task InitData()
         {
-
 
             this.IsRefreshing = true;
 

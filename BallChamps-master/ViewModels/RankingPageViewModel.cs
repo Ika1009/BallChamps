@@ -2,6 +2,7 @@
 using ApiClient;
 using BallChamps.Domain;
 using BallChamps.Services;
+using BallChamps.View;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
@@ -23,12 +24,6 @@ namespace BallChamps.ViewModels
         [ObservableProperty]
         private bool _isRefreshing;
 
-        [ObservableProperty]
-        private Profile _profile;
-
-        [ObservableProperty]
-        private Profile _selectedProfile;
-
         public ICommand SelectedProfileCommand { get; }
         public ICommand LoadItemsCommand;
 
@@ -36,13 +31,14 @@ namespace BallChamps.ViewModels
         public RankingPageViewModel()
         {
             InitData();
+            SelectedProfileCommand = new Command<Profile>(OnSelectedUserProfileCommand);
 
-           // SelectedProfileCommand = new Command(OnSelectedProfileCommand);
-            
+            // SelectedProfileCommand = new Command(OnSelectedProfileCommand);
+
         }
 
 
-      
+
         public async void InitData()
         {
             this.IsRefreshing = true;
@@ -54,17 +50,15 @@ namespace BallChamps.ViewModels
             this.IsRefreshing = false;
         }
 
-        public async void OnSelectedUserProfileCommand()
+        public async void OnSelectedUserProfileCommand(Profile profile)
         {
             try
             {
-                _profile = _selectedProfile;
-               // App.NavigationService.NavigateTo("SettingPage", _userProfile);
-
+                await Shell.Current.Navigation.PushAsync(new ProfilePage(profile));
             }
             catch (Exception ex)
             {
-                throw ex;
+                await Shell.Current.DisplayAlert("Something went wrong!", ex.Message, "OK");
             }
         }
 

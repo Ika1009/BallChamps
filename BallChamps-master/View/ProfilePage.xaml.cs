@@ -1,3 +1,4 @@
+using BallChamps.Domain;
 using BallChamps.ViewModels;
 
 namespace BallChamps.View;
@@ -10,7 +11,13 @@ public partial class ProfilePage : ContentPage
 		BindingContext = vm;
         
     }
-	async void OnEditProfileButtonClicked(object sender, EventArgs e)
+    public ProfilePage(Profile profile)
+    {
+        InitializeComponent();
+        BindingContext = new ProfilePageViewModel(profile);
+
+    }
+    async void OnEditProfileButtonClicked(object sender, EventArgs e)
 	{
 		await Navigation.PushAsync(new EditProfilePage());
 	}
