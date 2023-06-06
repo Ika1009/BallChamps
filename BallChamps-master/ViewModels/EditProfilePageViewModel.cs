@@ -8,6 +8,7 @@ using BallChamps.Domain;
 using BallChamps.Models;
 using BallChamps.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
+using BallChamps.Services;
 
 using System.Collections.ObjectModel;
 using System.ComponentModel.Design;
@@ -88,6 +89,18 @@ namespace BallChamps.ViewModels
             {
                 var stream = await result.OpenReadAsync();
                 ProfileImage = ImageSource.FromStream(() => stream);
+
+                // Here, you'll want to upload the file to your cloud storage.
+                bool uploadResult = false/*await StorageAPI.UpdateUserProfileImageInBlogStorage(UserService.CurrentUser.ProfileId, stream, result.FileName)*/;
+
+                if (uploadResult)
+                {
+                    Console.WriteLine("Successfully uploaded image to cloud storage");
+                }
+                else
+                {
+                    Console.WriteLine("Failed to upload image to cloud storage");
+                }
             }
         }
 

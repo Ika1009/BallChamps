@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using System.Reflection.Metadata;
 
 namespace ApiClient
 {
@@ -30,21 +31,15 @@ namespace ApiClient
         }
 
 
-        public async Task<bool> UpdateUserProfileImageInBlogStorage(string Id, IFormFile file)
+        public async Task<bool> UpdateUserProfileImageInBlogStorage(string Id, Stream fileStream, string fileName)
         {
-
             string _blobContainerName = UserProfileContainerName;
             string _connectionString = BallChampsBlobConnectionString;
             bool isUploaded = false;
-            string filePath = string.Empty;
             string uniqueFileName = null;
             string fullpath = "";
-            string fileExt = "";
-            string imagePath = "";
-            fileExt = System.IO.Path.GetExtension(file.FileName);
-            uniqueFileName = Id + ".png";
 
-            fileExt = System.IO.Path.GetExtension(file.FileName);
+            uniqueFileName = Id + ".png";
 
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(_connectionString);
 
@@ -53,52 +48,23 @@ namespace ApiClient
 
             await _blobContainer.SetPermissionsAsync(new BlobContainerPermissions { PublicAccess = BlobContainerPublicAccessType.Blob });
 
+            // Create a blob reference
+            var blob = _blobContainer.GetBlockBlobReference(uniqueFileName);
+
             try
             {
-                BlobContinuationToken blobContinuationToken = null;
-                do
-                {
-                    var blob = _blobContainer.GetBlockBlobReference(uniqueFileName);
+                // Directly upload from stream
+                await blob.UploadFromStreamAsync(fileStream);
 
-                    if (blob != null)
-                    {
-
-                        //if (blob.Metadata.Count == 0)
-                        //{
-                        //    blob.DeleteAsync().Wait();
-                        //}
-
-
-                        var blobx = _blobContainer.GetBlockBlobReference(uniqueFileName);
-
-                        using (var stream = file.OpenReadStream())
-                            blobx.UploadFromStreamAsync(stream).Wait();
-
-
-                    }
-                    else
-                    {
-                        using (var stream = file.OpenReadStream())
-                            blob.UploadFromStreamAsync(stream).Wait();
-
-
-                    }
-
-                }
-                while (blobContinuationToken != null);
-
-
+                isUploaded = true; // Set to true after successful upload
             }
             catch (Exception ex)
             {
-                var x = ex;
+                Console.WriteLine(ex);
+                isUploaded = false; // Set to false if any exception occurs
             }
 
-
-            fullpath = filePath;
-
-            imagePath = uniqueFileName;
-
+            fullpath = blob.Uri.AbsoluteUri; // The full path of the uploaded blob
 
             return isUploaded;
         }

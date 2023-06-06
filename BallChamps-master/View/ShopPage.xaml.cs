@@ -1,3 +1,5 @@
+using BallChamps.ViewModels;
+
 namespace BallChamps.View;
 
 public partial class ShopPage : ContentPage
