@@ -15,10 +15,13 @@
         <ScrollView Grid.Row="0">
             <StackLayout>
                 <Grid>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ChooseImageCommand}"></TapGestureRecognizer>
+                    </Grid.GestureRecognizers>
                     
                     <Image Source="iconorangecamera.png" Aspect="AspectFit" HeightRequest="105" WidthRequest="105"/>
 
-                    <Image Source="iconeditimg.png" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" 
+                    <Image Source="{Binding UploadedImageUrl}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" 
                    Margin="20" VerticalOptions="Center" HorizontalOptions="Center"/>
 
                     <Image Source="iconorangecamera.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"
@@ -240,7 +243,7 @@
             
             
         </ScrollView>
-            <Button Grid.Row="1" Text="SAVE" FontAttributes="Bold" HeightRequest="60" FontSize="Micro" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White" Margin="25,10,25,10" Clicked="Button_Clicked" />
+        <Button Grid.Row="1" Text="SAVE" Command="{Binding SaveProfileCommand}" FontAttributes="Bold" HeightRequest="60" FontSize="Micro" Padding="15" BackgroundColor="{StaticResource orangeColor}" TextColor="White" Margin="25,10,25,10"/>
     </Grid>
     
 </ContentPage>

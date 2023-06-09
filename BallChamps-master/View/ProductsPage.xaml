@@ -30,8 +30,8 @@
         </CollectionView.ItemTemplate>
         
     </CollectionView-->
-
-    <CollectionView ItemsSource="{Binding Products}" x:Name="ProductsList" SelectionMode="Single">
+    
+    <CollectionView ItemsSource="{Binding Products}" SelectionMode="Single">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid BackgroundColor="#1a1a1a" WidthRequest="200" Padding="0" Margin="0,10,0,10">

@@ -9,9 +9,4 @@ public partial class EditProfilePage : ContentPage
 		InitializeComponent();
 		BindingContext = new EditProfilePageViewModel();
 	}
-
-    private async void Button_Clicked(object sender, EventArgs e)
-    {
-		await Navigation.PopAsync(true);
-    }
 }

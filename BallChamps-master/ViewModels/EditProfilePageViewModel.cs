@@ -13,6 +13,10 @@ using BallChamps.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel.Design;
 using System.Windows.Input;
+using Azure.Storage.Blobs;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace BallChamps.ViewModels
 {
@@ -37,11 +41,13 @@ namespace BallChamps.ViewModels
         string skillOne;
         [ObservableProperty]
         string skillTwo;
-
+        [ObservableProperty]
+        private string uploadedImageUrl;
 
         public EditProfilePageViewModel()
         {
             ChooseImageCommand = new Command(async () => await OnChooseImage());
+            SaveProfileCommand = new Command(async () => await SaveProfile());
             InitDataAsync();
         }
 
@@ -58,6 +64,7 @@ namespace BallChamps.ViewModels
             Position = profile.Position;
             SkillOne = profile.SkillOne;
             SkillTwo = profile.SkillTwo;
+            UploadedImageUrl = profile.ImagePath;
 
             this.IsRefreshing = false;
         }
@@ -66,17 +73,7 @@ namespace BallChamps.ViewModels
         public ICommand SaveProfileCommand { get; }
 
 
-        private ImageSource _profileImage;
-        public ImageSource ProfileImage
-        {
-            get { return _profileImage; }
-            set
-            {
-                _profileImage = value;
-                OnPropertyChanged();
-            }
-        }
-
+        Microsoft.Maui.Storage.FileResult pickedImageResult;
         private async Task OnChooseImage()
         {
             var result = await FilePicker.PickAsync(new PickOptions
@@ -87,25 +84,58 @@ namespace BallChamps.ViewModels
 
             if (result != null)
             {
-                var stream = await result.OpenReadAsync();
-                ProfileImage = ImageSource.FromStream(() => stream);
-
-                // Here, you'll want to upload the file to your cloud storage.
-                bool uploadResult = false/*await StorageAPI.UpdateUserProfileImageInBlogStorage(UserService.CurrentUser.ProfileId, stream, result.FileName)*/;
-
-                if (uploadResult)
-                {
-                    Console.WriteLine("Successfully uploaded image to cloud storage");
-                }
-                else
-                {
-                    Console.WriteLine("Failed to upload image to cloud storage");
-                }
+                pickedImageResult = result;
             }
+        }
+
+        // This would typically be loaded from your JSON configuration
+        private string storageConnectionString =
+            "DefaultEndpointsProtocol=https;AccountName=ballchampsblobstorage;AccountKey=w3lU//fIpdeGKPHuWRCFb+NVVKfwxt9dR63xxF2Agjj8AWdRD95QEXqcMmEV4TqHFwlaVdgoByRS+AStx3HcOQ==;EndpointSuffix=core.windows.net";
+
+        // The container where you want to upload the image
+        private string blobContainerName = "userprofileimage";  // change to your desired container
+
+        public async Task UploadImageAsync(Microsoft.Maui.Storage.FileResult fileResult, string userId)
+        {
+            // Create a BlobServiceClient object which will be used to create a container client
+            BlobServiceClient blobServiceClient = new BlobServiceClient(storageConnectionString);
+
+            // Create the container and return a container client object
+            BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(blobContainerName);
+
+            // Check if the container exists, and if not, create it
+            if (!await containerClient.ExistsAsync())
+            {
+                await containerClient.CreateAsync();
+            }
+
+            // Get a reference to a blob
+            BlobClient blobClient = containerClient.GetBlobClient($"{userId}.png");
+
+            // Open the file stream
+            using Stream fileStream = await fileResult.OpenReadAsync();
+
+            // Upload file
+            await blobClient.UploadAsync(fileStream, true);
+
+            UploadedImageUrl = blobClient.Uri.AbsoluteUri;
         }
 
         public async Task SaveProfile()
         {
+            if (pickedImageResult is not null)
+            {
+                try
+                {
+                    // Here, you'll want to upload the file to your cloud storage.
+                    await UploadImageAsync(pickedImageResult, UserService.CurrentUser.UserId);
+                }
+                catch (Exception ex)
+                {
+                    await Shell.Current.DisplayAlert("Something went wrong when uploading an image", ex.Message, "OK");
+                }
+            }
+
             await ProfileApi.UpdateUserProfileById(new()
             {
                 UserName = Username,
@@ -115,18 +145,13 @@ namespace BallChamps.ViewModels
                 StyleOfPlay = StyleOfPlay,
                 Position = Position,
                 SkillOne = SkillOne,
-                SkillTwo = SkillTwo
+                SkillTwo = SkillTwo,
+                ImagePath = UploadedImageUrl
 
-            }, UserService.CurrentUser.Token);
+            }, UserService.CurrentUser.ProfileId);
+
+            await Shell.Current.GoToAsync("//Home/ProfilePage");
         }
 
     }
 }
-/*Username = profile.UserName;
-FirstName = profile.FirstName;
-LastName = profile.LastName;
-Age = profile.Age;
-StyleOfPlay = profile.StyleOfPlay;
-Position = profile.Position;
-SkillOne = profile.SkillOne;
-SkillTwo = profile.SkillTwo;*/

@@ -109,7 +109,7 @@ namespace ApiClient
         /// </summary>
         /// <param name="userProfile"></param>
         /// <param name="token"></param>
-        public static async Task UpdateUserProfileById(UserProfileDTO userProfile, string token)
+        public static async Task UpdateUserProfileById(Profile userProfile, string token)
         {
             var jsonString = Newtonsoft.Json.JsonConvert.SerializeObject(userProfile);
 
@@ -124,7 +124,7 @@ namespace ApiClient
                 HttpContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
                 try
                 {
-                    var response = await client.PostAsync("api/UserProfile/UpdateUserProfile/", content);
+                    var response = await client.PutAsync("/api/Profile/UpdateProfile", content);
                     var responseString = await response.Content.ReadAsStringAsync();
 
                     if (response.IsSuccessStatusCode)

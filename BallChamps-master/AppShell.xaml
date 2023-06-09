@@ -31,6 +31,7 @@
                      ContentTemplate="{DataTemplate views:HomePage}" />
         <ShellContent Title="Profile"
                      Icon="icon_tab_profile.png"
+                      Route="ProfilePage"
                      ContentTemplate="{DataTemplate views:ProfilePage}" />
         <ShellContent Title="Courts"
                       Icon="icon_tab_courts.png"
