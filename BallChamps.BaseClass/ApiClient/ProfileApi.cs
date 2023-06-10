@@ -116,27 +116,17 @@ namespace ApiClient
             var clientBaseAddress = _api.Intial();
             using (var client = new HttpClient())
             {
-
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.BaseAddress = clientBaseAddress.BaseAddress;
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpContent content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-                try
-                {
-                    var response = await client.PutAsync("/api/Profile/UpdateProfile", content);
-                    var responseString = await response.Content.ReadAsStringAsync();
 
-                    if (response.IsSuccessStatusCode)
-                    {
+                var response = await client.PostAsync("api/Profile/UpdateProfile", content);
+                var responseString = await response.Content.ReadAsStringAsync();
 
-                    }
-                }
+                response.EnsureSuccessStatusCode();
 
-                catch (Exception ex)
-                {
-                    var x = ex;
-                }
             }
 
         }

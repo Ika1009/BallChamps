@@ -42,7 +42,7 @@ namespace BallChamps.ViewModels
         [ObservableProperty]
         string skillTwo;
         [ObservableProperty]
-        private string uploadedImageUrl;
+        string uploadedImageUrl;
 
         public EditProfilePageViewModel()
         {
@@ -136,19 +136,27 @@ namespace BallChamps.ViewModels
                 }
             }
 
-            await ProfileApi.UpdateUserProfileById(new()
+            try
             {
-                UserName = Username,
-                FirstName = FirstName,
-                LastName = LastName,
-                Age = Age,
-                StyleOfPlay = StyleOfPlay,
-                Position = Position,
-                SkillOne = SkillOne,
-                SkillTwo = SkillTwo,
-                ImagePath = UploadedImageUrl
+                await ProfileApi.UpdateUserProfileById(new()
+                {
+                    UserName = Username,
+                    FirstName = FirstName,
+                    LastName = LastName,
+                    Age = Age,
+                    StyleOfPlay = StyleOfPlay,
+                    Position = Position,
+                    SkillOne = SkillOne,
+                    SkillTwo = SkillTwo,
+                    ImagePath = UploadedImageUrl
 
-            }, UserService.CurrentUser.ProfileId);
+                }, UserService.CurrentUser.Token);
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Something went wrong when updating a profile data.", ex.Message, "OK");
+            }
+
 
             await Shell.Current.GoToAsync("//Home/ProfilePage");
         }
