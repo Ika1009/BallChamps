@@ -15,7 +15,7 @@
     
     <ScrollView>
         <StackLayout>
-            <Image Source="homeimg1.png" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+            <Image Source="{Binding SelectedProfile.ImagePath}" Margin="10,20,10,0" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
             <Label Text="{Binding SelectedProfile.UserName}" TextColor="Black" HorizontalOptions="Center" FontSize="Title" Margin="10,0,10,10" />
             <Grid Margin="10">
                 <Grid.RowDefinitions>
