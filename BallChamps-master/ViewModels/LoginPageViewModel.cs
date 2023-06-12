@@ -3,6 +3,9 @@ using BallChamps.Domain;
 using BallChamps.Services;
 using BallChamps.View;
 using CommunityToolkit.Mvvm.ComponentModel;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using System.Net.Http;
 using System.Windows.Input;
 
 namespace BallChamps.ViewModels
@@ -35,12 +38,30 @@ namespace BallChamps.ViewModels
             if (!string.IsNullOrEmpty(token))
             {
                 // Token exists - auto-login
+
                 // You might need to validate the token with the server and fetch the user's details from the given token
-                // Make an API that will call of the user data and then call the following line
+
+                // The API should be made on the server and when called
+                // should look something along the lines of the commented method ValidateTokenAndGetUserDetailsAsync
+
                 // await Shell.Current.GoToAsync("//Home/HomePage");
             }
         }
+        //public async Task<User> ValidateTokenAndGetUserDetailsAsync(string token)
+        //{
+        //    Include the token in the request
+        //    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
+        //    Send a request to a server endpoint that validates the token and returns user details
+        //   HttpResponseMessage response = await httpClient.GetAsync(endpoint + "/validateTokenAndGetUserDetails");
+
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        string jsonResponse = await response.Content.ReadAsStringAsync();
+        //        User user = JsonConvert.DeserializeObject<User>(jsonResponse);
+        //        return user;
+        //    }
+        //}
         public async void OnLoginCommand()
         {
             if (string.IsNullOrEmpty(UserName)) { await Shell.Current.DisplayAlert("Alert", "You need to fill in the username", "OK"); return; }
