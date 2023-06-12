@@ -109,10 +109,27 @@ namespace BallChamps.ViewModels
             this.IsRefreshing = true;
 
             // SelectedProfile = await ProfileApi.GetProfileById("52c7c730-1770-46f7-842b-2a885f6c120a"UserService.CurrentUser.ProfileId, null);
-            SelectedProfile = await ProfileApi.GetProfileById(UserService.CurrentUser.ProfileId, UserService.CurrentUser.Token);
+            Profile SelectedProfile;
 
-            Record = SelectedProfile.WinPercentage + "-" + SelectedProfile.Losses;
+            List<NewsFeed> list;
+            try
+            {
+                SelectedProfile = await ProfileApi.GetProfileById(UserService.CurrentUser.ProfileId, await UserService.GetTokenAsync());
+            }
+            catch (Exception ex)
+            {
+                if (ex is UnauthorizedAccessException) // token has expired
+                {
+                    UserService.RemoveToken();
+                    await Shell.Current.DisplayAlert("Your session has expired.", "Please login again!", "OK");
+                    await Shell.Current.GoToAsync("Login");
+                    return;
+                }
+                await Shell.Current.DisplayAlert("Something went wrong.", ex.Message, "OK");
+                SelectedProfile = new();
+            }
 
+            Record = SelectedProfile?.WinPercentage + "-" + SelectedProfile?.Losses;
 
 
             this.IsRefreshing = false;

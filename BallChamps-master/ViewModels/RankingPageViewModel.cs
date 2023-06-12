@@ -43,7 +43,24 @@ namespace BallChamps.ViewModels
         {
             this.IsRefreshing = true;
 
-            var list = await ProfileApi.GetProfiles(UserService.CurrentUser.Token);
+            List<Profile> list;
+
+            try
+            {
+                list = await ProfileApi.GetProfiles(await UserService.GetTokenAsync());
+            }
+            catch (Exception ex)
+            {
+                if (ex is UnauthorizedAccessException) // token has expired
+                {
+                    UserService.RemoveToken();
+                    await Shell.Current.DisplayAlert("Your session has expired.", "Please login again!", "OK");
+                    await Shell.Current.GoToAsync("Login");
+                    return;
+                }
+                await Shell.Current.DisplayAlert("Something went wrong.", ex.Message, "OK");
+                list = new();
+            }
 
             ProfileCollection = new ObservableCollection<Profile>(list);
 

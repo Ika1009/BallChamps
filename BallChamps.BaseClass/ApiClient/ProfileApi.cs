@@ -4,6 +4,7 @@ using DataLayer.DTO;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using Newtonsoft.Json;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -39,22 +40,20 @@ namespace ApiClient
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                try
-                {
-                    var response = await client.GetAsync("api/Profile/GetProfiles/");
-                    var responseString = await response.Content.ReadAsStringAsync();
-                    string responseUri = response.RequestMessage.RequestUri.ToString();
+                var response = await client.GetAsync("api/Profile/GetProfiles/");
+                var responseString = await response.Content.ReadAsStringAsync();
+                string responseUri = response.RequestMessage.RequestUri.ToString();
 
-                    if (response.IsSuccessStatusCode)
-                    {
-                        _profiles = JsonConvert.DeserializeObject<List<Profile>>(responseString);
-                    }
-                }
-
-                catch (Exception ex)
+                if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine(ex.ToString());
+                    _profiles = JsonConvert.DeserializeObject<List<Profile>>(responseString);
                 }
+                else if (response.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    throw new UnauthorizedAccessException("Token is expired");
+                }
+                else
+                    throw new Exception();
             }
             return _profiles;
         }
@@ -81,24 +80,20 @@ namespace ApiClient
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                try
+                var response = await client.GetAsync("api/Profile/GetProfileById" + urlParameters);
+                var responseString = await response.Content.ReadAsStringAsync();
+                string responseUri = response.RequestMessage.RequestUri.ToString();
+
+                if (response.IsSuccessStatusCode)
                 {
-                    var response = await client.GetAsync("api/Profile/GetProfileById" + urlParameters);
-                    var responseString = await response.Content.ReadAsStringAsync();
-                    string responseUri = response.RequestMessage.RequestUri.ToString();
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        _userProfile = JsonConvert.DeserializeObject<Profile>(responseString);
-
-                    }
+                    _userProfile = JsonConvert.DeserializeObject<Profile>(responseString);
                 }
-
-                catch (Exception ex)
+                else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    Console.WriteLine(ex.ToString());
+                    throw new UnauthorizedAccessException("Token is expired");
                 }
-
+                else
+                    throw new Exception("Something went wrong!");
             }
 
             return _userProfile;

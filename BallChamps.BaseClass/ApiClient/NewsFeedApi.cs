@@ -1,6 +1,7 @@
 ﻿using ApiClient.Helper;
 using BallChamps.Domain;
 using Newtonsoft.Json;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -73,22 +74,20 @@ namespace ApiClient
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                try
+
+                var response = await client.GetAsync("api/NewsFeed/GetNewsFeeds/");
+                var responseString = await response.Content.ReadAsStringAsync();
+
+
+                if (response.IsSuccessStatusCode)
+                    return JsonConvert.DeserializeObject<List<NewsFeed>>(responseString);
+
+                else if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    var response = await client.GetAsync("api/NewsFeed/GetNewsFeeds/");
-                    var responseString = await response.Content.ReadAsStringAsync();
-
-
-                    if (response.IsSuccessStatusCode)
-                        return JsonConvert.DeserializeObject<List<NewsFeed>>(responseString);
-                    else
-                        throw new Exception("Something went wrong!");
+                    throw new UnauthorizedAccessException("Token is expired");
                 }
-
-                catch (Exception ex)
-                {
-                    return new List<NewsFeed>();
-                }
+                else
+                    throw new Exception();
 
             }
         }

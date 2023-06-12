@@ -22,9 +22,23 @@ namespace BallChamps.ViewModels
 
         public LoginPageViewModel()
         {
+            CheckForAutoLoginAsync();
+
             LoginCommand = new Command(OnLoginCommand);
             //GoToRegisterCommand = new Command(OnGoToRegisterCommand);
             //ForgotPasswordCommand = new Command(OnGoToForgotPasswordCommand);
+        }
+
+        public async Task CheckForAutoLoginAsync()
+        {
+            string token = await UserService.GetTokenAsync();
+            if (!string.IsNullOrEmpty(token))
+            {
+                // Token exists - auto-login
+                // You might need to validate the token with the server and fetch the user's details from the given token
+                // Make an API that will call of the user data and then call the following line
+                // await Shell.Current.GoToAsync("//Home/HomePage");
+            }
         }
 
         public async void OnLoginCommand()
@@ -41,7 +55,9 @@ namespace BallChamps.ViewModels
                 if (_userResult != null)
                 {
                     //Set Current User Variables
-                    if (_userResult.Token != null) UserService.CurrentUser.Token = _userResult.Token; // the Token is null in the Database
+
+                    // the Token is null in the Database, that should not happen
+                    if (_userResult.Token != null) await UserService.SetTokenAsync(_userResult.Token); // putting the token in the secure place
                     UserService.CurrentUser.Password = Password;
                     UserService.CurrentUser.Email = UserName;
                     UserService.CurrentUser.ProfileId = _userResult.ProfileId;

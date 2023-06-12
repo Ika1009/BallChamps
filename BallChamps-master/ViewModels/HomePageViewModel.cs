@@ -31,8 +31,23 @@ namespace BallChamps.ViewModels
         public async Task GetNewsFeedData()
         {
             IsRefreshing = true;
-
-            var list = await NewsFeedApi.GetNewsFeeds(UserService.CurrentUser.Token);
+            List<NewsFeed> list;
+            try
+            {
+                list = await NewsFeedApi.GetNewsFeeds(await UserService.GetTokenAsync());
+            }
+            catch(Exception ex)
+            {
+                if(ex is UnauthorizedAccessException) // token has expired
+                {
+                    UserService.RemoveToken();
+                    await Shell.Current.DisplayAlert("Your session has expired.", "Please login again!", "OK");
+                    await Shell.Current.GoToAsync("Login");
+                    return;
+                }
+                await Shell.Current.DisplayAlert("Something went wrong.", ex.Message, "OK");
+                list = new();
+            }
 
             NewsFeedCollection = new ObservableCollection<NewsFeed>(list);
             IsRefreshing = false;

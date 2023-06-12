@@ -27,6 +27,7 @@ namespace BallChamps.Services
             {
                 var responseString = await response.Content.ReadAsStringAsync();
                 User user = JsonConvert.DeserializeObject<User>(responseString);
+
                 return user;
             }
             else

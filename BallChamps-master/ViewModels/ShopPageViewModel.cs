@@ -24,8 +24,26 @@ namespace BallChamps.ViewModels
 
         public async Task InitData()
         {
-            var productsFromApi = await ProductApi.GetProducts(UserService.CurrentUser.Token);
-            Products = new ObservableCollection<Product>(productsFromApi);
+            List<Product> list;
+
+            try
+            {
+                list = await ProductApi.GetProducts(await UserService.GetTokenAsync());
+            }
+            catch (Exception ex)
+            {
+                if (ex is UnauthorizedAccessException) // token has expired
+                {
+                    UserService.RemoveToken();
+                    await Shell.Current.DisplayAlert("Your session has expired.", "Please login again!", "OK");
+                    await Shell.Current.GoToAsync("Login");
+                    return;
+                }
+                await Shell.Current.DisplayAlert("Something went wrong.", ex.Message, "OK");
+                list = new();
+            }
+
+            Products = new ObservableCollection<Product>(list);
         }
     }
 }

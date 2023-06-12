@@ -2,6 +2,7 @@
 using BallChamps.Domain;
 using DataLayer.DTO;
 using Newtonsoft.Json;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -133,6 +134,10 @@ namespace ApiClient
                     {
                         _court = JsonConvert.DeserializeObject<List<Court>>(responseString);
 
+                    }
+                    else if (response.StatusCode == HttpStatusCode.Unauthorized)
+                    {
+                        throw new Exception("Token is expired");
                     }
                 }
 

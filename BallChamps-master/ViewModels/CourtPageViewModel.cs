@@ -48,7 +48,7 @@ namespace BallChamps.ViewModels
             this.IsRefreshing = true;
 
            
-             var list = await CourtApi.GetCourts(UserService.CurrentUser.Token);
+             var list = await CourtApi.GetCourts(await UserService.GetTokenAsync());
 
             CourtCollection = new ObservableCollection<Court>(list);
 

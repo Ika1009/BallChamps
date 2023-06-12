@@ -55,7 +55,7 @@ namespace BallChamps.ViewModels
         {
             this.IsRefreshing = true;
 
-            Profile profile = await ProfileApi.GetProfileById(UserService.CurrentUser.ProfileId, UserService.CurrentUser.Token);
+            Profile profile = await ProfileApi.GetProfileById(UserService.CurrentUser.ProfileId, await UserService.GetTokenAsync());
             Username = profile.UserName;
             FirstName = profile.FirstName;
             LastName = profile.LastName;
@@ -150,7 +150,7 @@ namespace BallChamps.ViewModels
                     SkillTwo = SkillTwo,
                     ImagePath = UploadedImageUrl
 
-                }, UserService.CurrentUser.Token);
+                }, await UserService.GetTokenAsync());
             }
             catch (Exception ex)
             {
