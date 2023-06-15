@@ -33,14 +33,14 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
 
-                                    <Image Source="homeimg1.png" Aspect="AspectFill" HeightRequest="50" WidthRequest="50"/>
-                                    <StackLayout Grid.Column="1" Margin="10,0,0,5">
+                                    <Image Source="homeimg1.png" Aspect="AspectFill" HeightRequest="50" WidthRequest="50" Margin="5,0,10,0"/>
+                                    <StackLayout Grid.Column="1" Margin="10,0,10,5">
                                         <Label Text="{Binding Title}" FontSize="Body" FontAttributes="Bold" TextColor="{StaticResource orangeColor}"/>
-                                        <Label TextColor="{StaticResource lightGrayColor}"  Text="{Binding }" FontSize="14" />
+                                        <Label TextColor="{StaticResource lightGrayColor}"  Text="{Binding}" FontSize="14" />
                                     </StackLayout>
-                                    <Label  Text="34m" FontSize="15" TextColor="{StaticResource grayColor}" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="2" />
+                                    <Label  Text="34m" FontSize="15" TextColor="{StaticResource grayColor}" HorizontalTextAlignment="End" VerticalTextAlignment="Start" Grid.Column="2" Margin="0,0,9,0"/>
                                 </Grid>
-                                <Image Source="homeimg2.png" MinimumHeightRequest="150" Aspect="AspectFill" Grid.Row="1" />
+                                <Image Source="homeimg2.png" MinimumHeightRequest="150" Aspect="AspectFill" Grid.Row="1" Margin="10,10,10,10"/>
                             </Grid>
                            
                         </DataTemplate>

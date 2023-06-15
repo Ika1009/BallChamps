@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9oenYGtjPEyGPednY8rs8UU1CPSh5AKU4esW69jjjI8DtVKKs642oChhpNsqKMNviXWXvL7vV6J95cY+kihzcQ==",
+  "dgSpecHash": "X4x/mn6S/hmkJO15OATnBMDN01ASVrJjdaKJClj4tVSle5dUq80BnofvvWEB0UHFZisi/HjXPKJPjSiiSttgwA==",
   "success": true,
   "projectFilePath": "D:\\Programiranje\\C#\\Ball Champs\\BallChamps\\BallChamps.Api\\BallChamps.Api.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ilija\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
-    "C:\\Users\\Ilija\\.nuget\\packages\\azure.storage.blobs\\12.12.0\\azure.storage.blobs.12.12.0.nupkg.sha512",
-    "C:\\Users\\Ilija\\.nuget\\packages\\azure.storage.common\\12.11.0\\azure.storage.common.12.11.0.nupkg.sha512",
+    "C:\\Users\\Ilija\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
+    "C:\\Users\\Ilija\\.nuget\\packages\\azure.storage.blobs\\12.13.0\\azure.storage.blobs.12.13.0.nupkg.sha512",
+    "C:\\Users\\Ilija\\.nuget\\packages\\azure.storage.common\\12.12.0\\azure.storage.common.12.12.0.nupkg.sha512",
     "C:\\Users\\Ilija\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\Ilija\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
     "C:\\Users\\Ilija\\.nuget\\packages\\microsoft.aspnet.webapi.webhost\\4.0.20710\\microsoft.aspnet.webapi.webhost.4.0.20710.nupkg.sha512",

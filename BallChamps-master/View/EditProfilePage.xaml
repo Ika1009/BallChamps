@@ -22,7 +22,11 @@
                     <Image Source="iconorangecamera.png" Aspect="AspectFit" HeightRequest="105" WidthRequest="105"/>
 
                     <Image Source="{Binding UploadedImageUrl}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" 
-                   Margin="20" VerticalOptions="Center" HorizontalOptions="Center"/>
+                   Margin="20" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image.Clip>
+                            <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                        </Image.Clip>
+                    </Image>
 
                     <Image Source="iconorangecamera.png" Aspect="AspectFit" HeightRequest="30" WidthRequest="30"
                    Margin="40,95,0,0"/>

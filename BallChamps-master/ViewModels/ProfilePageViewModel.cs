@@ -40,6 +40,9 @@ namespace BallChamps.ViewModels
         ObservableCollection<Profile> _profileCollection;
 
         [ObservableProperty]
+        private new bool _isBusy;
+
+        [ObservableProperty]
         private bool _isRefreshing;
 
         [ObservableProperty]
@@ -105,11 +108,12 @@ namespace BallChamps.ViewModels
       
         public async Task InitData()
         {
-
+            if(IsBusy)
+            { return; }
             this.IsRefreshing = true;
+            this.IsBusy = true;
 
             // SelectedProfile = await ProfileApi.GetProfileById("52c7c730-1770-46f7-842b-2a885f6c120a"UserService.CurrentUser.ProfileId, null);
-            Profile SelectedProfile;
 
             List<NewsFeed> list;
             try
@@ -131,7 +135,7 @@ namespace BallChamps.ViewModels
 
             Record = SelectedProfile?.WinPercentage + "-" + SelectedProfile?.Losses;
 
-
+            this.IsBusy = false;
             this.IsRefreshing = false;
         }
 
