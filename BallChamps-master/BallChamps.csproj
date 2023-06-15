@@ -101,6 +101,7 @@
 	  <None Remove="Resources\Images\iconYellowStar.png" />
 	  <None Remove="Resources\Images\icon_orange_add_button.png" />
 	  <None Remove="Resources\Images\logo.svg" />
+		<None Remove="Resources\Images\logo_cropped.svg" />
 	  <None Remove="Resources\Images\map.png" />
 	  <None Remove="Resources\Images\ProductImg1.png" />
 	  <None Remove="Resources\Images\ProductImg2.png" />

@@ -20,11 +20,10 @@
         </Grid.RowDefinitions>
 
         <!-- Logo in the upper half -->
-        <Image Source="logo.png"
+        <Image Source="logo_cropped.png"
            Aspect="AspectFit"
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" 
-               HeightRequest="100"
+           VerticalOptions="Start" 
                Margin="0"/>
 
         <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Margin="25">
@@ -47,7 +46,7 @@
                        Aspect="Fill"
                        Margin="0,2,5,2"/>
 
-                <Entry PlaceholderColor="White" Placeholder="Username" x:Name="usernameEntry" Text="{Binding UserName}"
+                <Entry PlaceholderColor="White" Placeholder="Username" TextColor="White"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
                HeightRequest="40"/>
@@ -68,7 +67,7 @@
                        Aspect="Fill"
                        Margin="0,2,5,2"/>
 
-                <Entry PlaceholderColor="White" Placeholder="Password" x:Name="passwordEntry" Text="{Binding Password}"
+                <Entry PlaceholderColor="White" Placeholder="Password" TextColor="White"
                HorizontalOptions="FillAndExpand"      
                VerticalOptions="FillAndExpand"
                HeightRequest="40"/>
@@ -85,7 +84,7 @@
             <Label Text="Remember me?" FontSize="Small" VerticalOptions="Center" TextColor="Gray" />
         </StackLayout>
 
-        <Button Text="Login" BackgroundColor="{StaticResource orangeColor}" Command="{Binding LoginCommand}" FontSize="Medium" TextColor="White" Grid.Row="5" Margin="10" />
+        <Button Text="Login" BackgroundColor="{StaticResource orangeColor}" FontSize="Medium" TextColor="White" Grid.Row="5" Margin="10" Clicked="LoginButton_Clicked" />
 
         <Label Text="Forgot password?" TextColor="Gray" FontSize="Small" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" Grid.Row="6">
             <Label.GestureRecognizers>
